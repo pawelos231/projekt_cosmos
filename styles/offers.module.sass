@@ -6,7 +6,7 @@
     justify-content: center
     position: absolute
     top: 285vh
-    transition: .3s
+    transition: 6s
     flex-wrap: wrap
     z-index: 1
 
@@ -28,6 +28,9 @@
             font-size: 13px
             line-height: 200%
 
+.OffersContainer[data-isOn="true"]
+    color: #fff
+
 .mainTextOffers
     position: absolute
     top: 275vh
@@ -35,7 +38,7 @@
     transition: .3s
     transform: translate(-50%, -50%)
     h1
-        color: $main-black
+        color: black
         transition: .3s
     h1[data-isOn="true"]
         color: white
@@ -44,9 +47,6 @@
         text-align: center
         color: $main-red
         margin-top: 10px
-
-.OffersContainer[data-isOn="true"]
-    color: white
 
 .SvgIconArticle
     width: 30%

@@ -9,7 +9,7 @@ export default function Home({ isOn }) {
       <div data-ison={isOn} className={styles.mainContainer}>
         <Omnie isOn={isOn} />
         <HeaderText isOn={isOn} />
-        <Offers />
+        <Offers isOn={isOn} />
         <Aboutme isOn={isOn} />
       </div>
     </>
