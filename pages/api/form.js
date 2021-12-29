@@ -30,6 +30,5 @@ export default function HandleForm(req, res) {
     };
     res.status(200).json(JSON.parse(body));
     bruh();
-    sendMail();
   }
 }
