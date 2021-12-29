@@ -19,47 +19,29 @@ export default function HandleForm(req, res) {
       }
     };
     const sendMail = async () => {
-      const transporter = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
+      let transporter = nodemailer.createTransport({
+        service: "gmail",
         auth: {
-          user: "pawelossek@gmail.com",
-          pass: "JebacPolicje123",
+          user: "p.linek.19d@gmail.com", // generated ethereal user
+          pass: "Pawelbanan123!", // generated ethereal password
         },
-        secure: true,
+        tls: {
+          rejectUnauthorized: false,
+        },
       });
-
-      await new Promise((resolve, reject) => {
-        // verify connection configuration
-        transporter.verify(function (error, success) {
-          if (error) {
-            console.log(error);
-            reject(error);
-          } else {
-            console.log("Server is ready to take our messages");
-            resolve(success);
-          }
-        });
-      });
-
       let mailOptions = {
         from: parsedobj.email, // sender address
-        to: "pawellinek2@gmail.com", // list of receivers
+        to: "pawellinek2@gmail.com, bp.graphics.contact@gmail.com", // list of receivers
         subject: parsedobj.lastName,
         text: `Hello my name is:${parsedobj.firstName} ${parsedobj.lastName} and my message to you is: ${parsedobj.message}                                                              And here is my email to contact me: ${parsedobj.email}`, // plain text body
       };
       // send mail with defined transport object
-      await new Promise((resolve, reject) => {
-        // send mail
-        transporter.sendMail(mailOptions, (err, info) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            console.log(info);
-            resolve(info);
-          }
-        });
+      transporter.sendMail(mailOptions, function (err, success) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Email sent Sucessufsdfds");
+        }
       });
     };
 
@@ -74,6 +56,10 @@ export default function HandleForm(req, res) {
       }
     };
     res.status(200).json(JSON.parse(body));
+    res.set({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    });
     bruh();
     sendMail();
   }
