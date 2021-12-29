@@ -12,7 +12,7 @@ datasource db {
 }
 
 model Contact{
-  id String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  id        String @id @default(dbgenerated()) @map("_id") @db.ObjectId
   firstName String
   lastName  String
   email     String
