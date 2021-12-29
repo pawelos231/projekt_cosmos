@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import DatabaseUserInformation from "../../components/navbar/subcomponents/ModalForm";
+import DatabaseUserInformation from "../../components/navbarComponent/subcomponents/ModalForm";
 const prisma = new PrismaClient();
 export default function handler(req, res) {
   if (req.method === "POST") {

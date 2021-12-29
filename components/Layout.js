@@ -1,9 +1,9 @@
 import { useState } from "react";
-import NavbarPhone from "../components/navbar/navbarPhone";
+import NavbarPhone from "./navbarComponent/navbarPhone";
 import styles from "../styles/switchDarkMode.module.sass";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import NavBar from "../components/navBar/navbar";
+import NavBar from "./navbarComponent/navbar";
 const Layout = ({ children, isOn, toggleSwitch }) => {
   const [size, setOnResize] = useState(false);
   const showMenu = () => {
