@@ -1,0 +1,54 @@
+
+.mainText
+    width: 40%
+    margin-top: -320vh
+    transition: .3s
+    z-index: 3
+    h1
+        text-align: center
+        font-size: 50px
+    p
+        text-align: center
+        margin-top: 6vh
+        line-height: 200%
+
+.mainText[data-isOn="true"]
+    color: white
+.FirstBlob
+    position: absolute
+    width: 100%
+    top: 35%
+    left: -45%
+    transform: rotate(180deg)
+
+.SecondaryBlob
+    position: absolute
+    width: 100%
+    top: 30%
+    left: 50%
+    transform: rotate(30deg)
+
+.InformationContainer
+    background-color: white
+    border: 3px solid black
+    border-radius: 30px
+    height: 85%
+    top: 80vh
+    width: 40%
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .3s
+.InformationContainer[data-isOn="true"]
+    background-color: #111
+    border: 3px solid white
+    color: white
+
+@media(min-width:2400px)
+    .mainText
+        font-size: 1.6rem
+        h1
+            font-size: 4.5rem
+    .InformationContainer
+        font-size: 1.6rem

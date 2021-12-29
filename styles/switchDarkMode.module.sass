@@ -1,0 +1,44 @@
+.switch
+    width: 4vw
+    height: 4vh
+    background-color: black
+    display: flex
+    justify-content: flex-start
+    border-radius: 60px
+    padding: 4.5px
+    cursor: pointer
+    transition: .2s linear
+    position: absolute
+    top: 3vh
+    left: 95vw
+    z-index: 300
+    position: fixed
+
+.switch[data-isOn="true"]
+    justify-content: flex-end
+    background-color: white
+
+.handle
+    width: 3vh
+    height: 3vh
+    background-color: white
+    border-radius: 50%
+
+.handle[data-isOn="true"]
+    background-color: black
+
+@media(max-width:1240px)
+    .switch
+        width: 7vw
+        left: 91vw
+@media(max-width:720px)
+    .switch
+        top: 3vh
+        width: 10vw
+        left: 5vw
+
+@media(min-width:2400px)
+    .handle
+        width: 3vh
+        height: 3vh
+        margin-top: 3px

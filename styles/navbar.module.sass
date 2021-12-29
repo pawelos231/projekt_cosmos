@@ -1,0 +1,75 @@
+@import '_mainColors.sass'
+
+.navigation
+    font-size: 14px
+    position: fixed
+    z-index: 33
+    background-color: rgba(0, 0, 0, 0)
+
+    ul
+        display: flex
+        padding: 2.5vh
+        list-style-type: none
+        line-height: 5vh
+        width: 100vw
+        justify-content: center
+        li
+            flex-basis: 7%
+            text-align: center
+            transition: .2s linear
+            cursor: pointer
+            &:hover
+                color: $main-red
+
+.navigationActive
+    backdrop-filter: blur(16px)
+
+.navigation[data-isOn="true"]
+    color: white
+
+#mainSite
+    position: absolute
+    left: 15%
+    font-size: 20px
+    font-weight: 500
+
+#buttonStyleStart
+    position: absolute
+    left: 80%
+    border-radius: 25px
+    width: 8%
+    height: 5vh
+    top: 2.5vh
+    z-index: 999
+    cursor: pointer
+    border: 2px solid $main-red
+    color: $main-red
+    transition: .15s
+    &:hover
+        background-color: #ddd
+        transform: scale(0.98)
+
+@media(min-width:2400px)
+    #buttonStyleStart
+        font-size: 1.4rem
+    .navigation
+        font-size: 1.4rem
+    #mainSite
+        font-size: 1.8rem
+
+@media(max-width:1240px)
+    .navigation
+        font-size: 16px
+        ul
+            li
+                flex-basis: 10%
+
+@media(max-width:960px)
+    #mainSite
+        left: 5%
+
+.MainDivForm
+    position: fixed
+    top: 0
+    left: 0
+    display: flex

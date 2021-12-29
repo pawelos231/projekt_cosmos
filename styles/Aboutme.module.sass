@@ -1,0 +1,32 @@
+@import '_mainColors'
+.AboutMeContainer
+    width: 65%
+    display: flex
+    height: 70%
+    position: absolute
+    top: 350vh
+    justify-content: flex-start
+    transition: .3s
+    .scrollablePhotos
+        flex-basis: 350%
+        height: 80%
+        margin-top: -5vh
+        background-color: gray
+        border-radius: 12px
+        border: none
+    div
+        line-height: 200%
+        margin-left: 70px
+        h2
+            text-align: center
+            color: $main-red
+        p
+            text-align: center
+            margin-top: 20px
+
+.AboutMeContainer[data-isOn="true"]
+    color: white
+
+@media(max-width:1240px)
+    .AboutMeContainer
+        width: 75%
