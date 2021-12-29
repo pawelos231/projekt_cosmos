@@ -19,16 +19,29 @@ export default function HandleForm(req, res) {
       }
     };
     const sendMail = async () => {
-      let transporter = nodemailer.createTransport({
-        service: "gmail",
+      const transporter = nodemailer.createTransport({
+        port: 465,
+        host: "smtp.gmail.com",
         auth: {
-          user: "pawelossek@gmail.com", // generated ethereal user
-          pass: "JebacPolicje123", // generated ethereal password
+          user: "pawelossek@gmail.com",
+          pass: "JebacPolicje123",
         },
-        tls: {
-          rejectUnauthorized: false,
-        },
+        secure: true,
       });
+
+      await new Promise((resolve, reject) => {
+        // verify connection configuration
+        transporter.verify(function (error, success) {
+          if (error) {
+            console.log(error);
+            reject(error);
+          } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+          }
+        });
+      });
+
       let mailOptions = {
         from: parsedobj.email, // sender address
         to: "pawellinek2@gmail.com", // list of receivers
@@ -36,12 +49,17 @@ export default function HandleForm(req, res) {
         text: `Hello my name is:${parsedobj.firstName} ${parsedobj.lastName} and my message to you is: ${parsedobj.message}                                                              And here is my email to contact me: ${parsedobj.email}`, // plain text body
       };
       // send mail with defined transport object
-      transporter.sendMail(mailOptions, function (err, success) {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log("Email sent Sucessufsdfds");
-        }
+      await new Promise((resolve, reject) => {
+        // send mail
+        transporter.sendMail(mailOptions, (err, info) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            console.log(info);
+            resolve(info);
+          }
+        });
       });
     };
 
