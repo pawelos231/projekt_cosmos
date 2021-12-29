@@ -34,6 +34,7 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         email: email,
         message: message,
       };
+      console.log(DatabaseUserInformation);
       const response = await fetch("/api/form", {
         method: "POST",
         body: JSON.stringify(DatabaseUserInformation),
@@ -57,6 +58,7 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
       ></motion.div>
       <motion.h1 className={styles.h1Style} exit={{ y: -1000 }}></motion.h1>
       <motion.form
+        onSubmit={handleSubmit}
         className={styles.Form}
         exit={{ y: -1000 }}
         initial={{ y: -2000 }}
@@ -91,9 +93,7 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
           value={message}
           onChange={HandleOnMessageChange}
         />
-        <button id={styles.FormButtonSend} onClick={handleSubmit}>
-          Send
-        </button>
+        <button id={styles.FormButtonSend}>Send</button>
         <FontAwesomeIcon
           icon={faTimes}
           className={styles.svgClose}

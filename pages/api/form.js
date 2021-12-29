@@ -1,8 +1,11 @@
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+
 export default function HandleForm(req, res) {
+  const prisma = new PrismaClient();
   if (req.method === "POST") {
     const body = req.body;
+    const parsedobj = JSON.parse(body);
+    console.log(parsedobj);
 
     const bruh = async () => {
       const post = await prisma.contact.create({
@@ -10,7 +13,7 @@ export default function HandleForm(req, res) {
       });
       console.log(post);
     };
-    res.status(200).json(JSON.parse(body));
+    res.status(200).json({ name: "sexo" });
     bruh();
   }
 }
