@@ -6,7 +6,7 @@ import Omnie from "../components/OmnieSekcja/Omnie";
 export default function Home({ isOn }) {
   return (
     <>
-      <div data-isOn={isOn} className={styles.mainContainer}>
+      <div data-ison={isOn} className={styles.mainContainer}>
         <Omnie isOn={isOn} />
         <HeaderText isOn={isOn} />
         <Offers />

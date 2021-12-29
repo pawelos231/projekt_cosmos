@@ -8,9 +8,9 @@ const Aboutme = ({ isOn }) => {
   }, []);
   return (
     <section
-      data-Aos="fade-left"
+      data-aos="fade-left"
       className={styles.AboutMeContainer}
-      data-isOn={isOn}
+      data-ison={isOn}
     >
       <iframe
         title="Showcase of some projects that i have worked on"

@@ -14,15 +14,15 @@ const Offers = ({ isOn }) => {
   return (
     <>
       <div className={styles.mainTextOffers}>
-        <h1 data-Aos="fade-up" data-isOn={isOn}>
+        <h1 data-aos="fade-up" data-ison={isOn}>
           What am i offering?
         </h1>
-        <p data-Aos="fade-up">Important Featurtes</p>
+        <p data-aos="fade-up">Important Featurtes</p>
       </div>
       <section
-        data-Aos="fade-up"
+        data-aos="fade-up"
         className={styles.OffersContainer}
-        data-isOn={isOn}
+        data-ison={isOn}
       >
         <article className={styles.OffersSection}>
           <div>

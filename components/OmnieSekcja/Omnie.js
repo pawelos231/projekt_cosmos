@@ -14,7 +14,7 @@ const Omnie = ({ isOn }) => {
       ></Image>
       <div>
         <h2>About me</h2>
-        <p data-isOn={isOn}>
+        <p data-ison={isOn}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint itaque
           fugiat fugit alias numquam sit saepe repudiandae, cupiditate
           repellendus, eius sequi eaque voluptate atque dolorum voluptatem

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarPhone from "./navbarComponent/navbarPhone";
 import styles from "../styles/switchDarkMode.module.sass";
 import { motion } from "framer-motion";
@@ -13,23 +13,26 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
       setOnResize(true);
     }
   };
-  setTimeout(() => {
+  useEffect(() => {
     window.addEventListener("resize", showMenu);
     showMenu();
-  }, 20);
+  }, []);
 
   return (
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap"
           rel="stylesheet"
         />
         <title>Proffesional Web Design</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="UTF-8" />
         <meta
           name="keywords"
           content="Design, Photoshop, proffesional designer, designer, aftereffects, Professional designer"
@@ -40,12 +43,12 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
           content="Website Containing my portfolio and things that i worked on, also presenting some of the revievs from my clients"
         />
       </Head>
-      <div className={styles.switch} data-isOn={isOn} onClick={toggleSwitch}>
+      <div className={styles.switch} data-ison={isOn} onClick={toggleSwitch}>
         <motion.div
           className={styles.handle}
           layout
           transition={spring}
-          data-isOn={isOn}
+          data-ison={isOn}
           onClick={toggleSwitch}
         />
       </div>

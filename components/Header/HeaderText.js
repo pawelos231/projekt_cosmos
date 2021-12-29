@@ -4,7 +4,7 @@ import BlobBlue from "./Subcomponents/BlobBlue";
 const HeaderText = ({ isOn }) => {
   return (
     <>
-      <header data-isOn={isOn} className={styles.mainText}>
+      <header data-ison={isOn} className={styles.mainText}>
         <h1>Top Quality photoshop projects</h1>
         <p>
           Hi, my name is Przemek and i am a proffesional designer. I worked on
@@ -15,7 +15,7 @@ const HeaderText = ({ isOn }) => {
       </header>
       <Blob />
       <BlobBlue />
-      <div data-isOn={isOn} className={styles.InformationContainer}>
+      <div data-ison={isOn} className={styles.InformationContainer}>
         TU BĘDZIE SIĘ COŚ ZNAJDYWAŁO ALE NIE MAM NA TO MATERIAŁÓW XD
       </div>
     </>

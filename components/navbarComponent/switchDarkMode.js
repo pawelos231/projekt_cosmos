@@ -5,8 +5,14 @@ const SwitchDarkMode = () => {
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => setIsOn(!isOn);
   return (
-    <div className={styles.switch} data-isOn={isOn} onClick={toggleSwitch}>
-      <motion.div className={styles.handle} layout transition={spring} data-isOn={isOn} onClick={toggleSwitch} />
+    <div className={styles.switch} data-ison={isOn} onClick={toggleSwitch}>
+      <motion.div
+        className={styles.handle}
+        layout
+        transition={spring}
+        data-ison={isOn}
+        onClick={toggleSwitch}
+      />
     </div>
   );
 };

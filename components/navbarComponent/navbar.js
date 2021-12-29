@@ -1,7 +1,7 @@
 import styles from "../../styles/navbar.module.sass";
 import Link from "next/link";
 import SwitchDarkMode from "./switchDarkMode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ModalForm from "./subcomponents/ModalForm";
 import { AnimatePresence } from "framer-motion";
 const NavBar = ({ isOn }) => {
@@ -17,9 +17,9 @@ const NavBar = ({ isOn }) => {
       setForm(!form);
     }
   };
-  setTimeout(() => {
+  useEffect(() => {
     window.addEventListener("keydown", HandleModalVisibilityKeyHandle);
-  }, 20);
+  }, []);
 
   return (
     <>
@@ -29,7 +29,7 @@ const NavBar = ({ isOn }) => {
             ? `${styles.navigation} ${styles.navigationActive}`
             : styles.navigation
         }
-        data-isOn={isOn}
+        data-ison={isOn}
       >
         <ul>
           <Link href="/">

@@ -14,7 +14,7 @@ const NavbarPhone = ({ isOn }) => {
       <i
         onClick={handleOnClickHamburger}
         className={styles.navigationPhone}
-        data-isOn={isOn}
+        data-ison={isOn}
       >
         <FontAwesomeIcon icon={click === false ? faBars : faTimes} />
       </i>
