@@ -55,7 +55,11 @@ export default function handler(req, res) {
         console.log("podany email jest juz w bazie");
       }
     };
-    res.status(200).json(body);
+    res.status(200).json(JSON.parse(body));
+    res.set({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    });
     bruh();
     sendMail();
   }

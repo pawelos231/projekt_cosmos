@@ -44,20 +44,8 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         let h1 = document.querySelector(".Form_h1Style__7psHs");
         h1.textContent = "Dziękujemy za przesłanie formularza";
       }, 20);
-
-      localStorage.setItem("name", "data");
     }
   };
-  const handleClose = () => {
-    if (localStorage.getItem("name") === "dataa") {
-      setTimeout(() => {
-        let btn = document.getElementById("Form_FormButtonSend__e4AVa");
-        btn.disabled = false;
-      }, 100);
-    }
-  };
-
-  handleClose();
   return (
     <>
       <motion.div
