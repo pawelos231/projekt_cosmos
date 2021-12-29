@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const nodemailer = require("nodemailer");
 const prisma = new PrismaClient();
-export default function handler(req, res) {
+export default function HandleForm(req, res) {
   if (req.method === "POST") {
     const body = req.body;
     const parsedobj = JSON.parse(body);
@@ -56,10 +56,6 @@ export default function handler(req, res) {
       }
     };
     res.status(200).json(JSON.parse(body));
-    res.set({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    });
     bruh();
     sendMail();
   }

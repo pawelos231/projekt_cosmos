@@ -25,8 +25,7 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
   const HandleOnMessageChange = (e) => {
     SetMessage(e.target.value);
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     if (message !== "" && email !== "" && name !== "" && lastName !== "") {
       const DatabaseUserInformation = {
         firstName: name,
