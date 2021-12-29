@@ -8,7 +8,6 @@ const NewIdea = () => {
       focusable="false"
       data-prefix="fas"
       data-icon="lightbulb"
-      class="svg-inline--fa fa-lightbulb fa-w-11"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 352 512"

@@ -3,7 +3,6 @@ import HeaderText from "../components/Header/HeaderText";
 import Offers from "../components/RevievSection/Offers";
 import Aboutme from "../components/AboutMeSection/Aboutme";
 import Omnie from "../components/OmnieSekcja/Omnie";
-import dynamic from "next/dynamic";
 export default function Home({ isOn }) {
   return (
     <>

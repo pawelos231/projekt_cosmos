@@ -7,7 +7,6 @@ const FastPerfomance = () => {
       focusable="false"
       data-prefix="fas"
       data-icon="shipping-fast"
-      class="svg-inline--fa fa-shipping-fast fa-w-20"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 640 512"
