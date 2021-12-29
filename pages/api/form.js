@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import DatabaseUserInformation from "../../components/navbarComponent/subcomponents/ModalForm";
 const nodemailer = require("nodemailer");
 const prisma = new PrismaClient();
 export default function handler(req, res) {
@@ -37,7 +36,7 @@ export default function handler(req, res) {
         text: `Hello my name is:${parsedobj.firstName} ${parsedobj.lastName} and my message to you is: ${parsedobj.message}                                                              And here is my email to contact me: ${parsedobj.email}`, // plain text body
       };
       // send mail with defined transport object
-      await transporter.sendMail(mailOptions, function (err, success) {
+      transporter.sendMail(mailOptions, function (err, success) {
         if (err) {
           console.log(err);
         } else {

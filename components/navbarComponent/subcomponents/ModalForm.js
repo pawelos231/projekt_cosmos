@@ -75,28 +75,28 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         animate={{ y: 0 }}
       >
         <input
-          required="true"
+          required={true}
           type="text"
           placeholder="Name..."
           value={name}
           onChange={HandleOnNameChange}
         />
         <input
-          required="true"
+          required={true}
           type="text"
           placeholder="Last Name..."
           value={lastName}
           onChange={HandleOnLastNameChange}
         />
         <input
-          required="true"
+          required={true}
           type="email"
           placeholder="Your Email address"
           value={email}
           onChange={HandleOnEmailChange}
         />
         <textarea
-          required="true"
+          required={true}
           id={styles.textAreaHolder}
           type="text"
           placeholder="message..."
