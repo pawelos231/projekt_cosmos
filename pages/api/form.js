@@ -36,7 +36,7 @@ export default function HandleForm(req, res) {
         text: `Hello my name is:${parsedobj.firstName} ${parsedobj.lastName} and my message to you is: ${parsedobj.message}                                                              And here is my email to contact me: ${parsedobj.email}`, // plain text body
       };
       // send mail with defined transport object
-      transporter.sendMail(mailOptions, function (err, success) {
+      await transporter.sendMail(mailOptions, function (err, success) {
         if (err) {
           console.log(err);
         } else {
