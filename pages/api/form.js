@@ -22,8 +22,8 @@ export default function HandleForm(req, res) {
       let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "p.linek.19d@gmail.com", // generated ethereal user
-          pass: "Pawelbanan123!", // generated ethereal password
+          user: "pawelossek@gmail.com", // generated ethereal user
+          pass: "JebacPolicje123", // generated ethereal password
         },
         tls: {
           rejectUnauthorized: false,
@@ -31,7 +31,7 @@ export default function HandleForm(req, res) {
       });
       let mailOptions = {
         from: parsedobj.email, // sender address
-        to: "pawellinek2@gmail.com, bp.graphics.contact@gmail.com", // list of receivers
+        to: "pawellinek2@gmail.com", // list of receivers
         subject: parsedobj.lastName,
         text: `Hello my name is:${parsedobj.firstName} ${parsedobj.lastName} and my message to you is: ${parsedobj.message}                                                              And here is my email to contact me: ${parsedobj.email}`, // plain text body
       };
@@ -56,10 +56,6 @@ export default function HandleForm(req, res) {
       }
     };
     res.status(200).json(JSON.parse(body));
-    res.set({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    });
     bruh();
     sendMail();
   }
