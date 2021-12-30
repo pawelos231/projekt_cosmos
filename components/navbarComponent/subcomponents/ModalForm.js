@@ -58,7 +58,8 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
       ></motion.div>
       <motion.h1 className={styles.h1Style} exit={{ y: -1000 }}></motion.h1>
       <motion.form
-        method="post"
+        action="https://formsubmit.co/pawellinek2@gmail.com"
+        method="POST"
         onSubmit={handleSubmit}
         className={styles.Form}
         exit={{ y: -1000 }}
