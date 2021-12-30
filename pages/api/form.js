@@ -10,7 +10,7 @@ export default async function HandleForm(req, res) {
     console.log(parsedobj);
     const SendMail = async () => {
       for (let i = 0; i < 6; i++) {
-        let transporter = await nodemailer.createTransport({
+        let transporter = nodemailer.createTransport({
           service: "hotmail",
           port: 587,
           secure: false,
@@ -28,7 +28,7 @@ export default async function HandleForm(req, res) {
           subject: `Hi my name is ${parsedobj.firstName}`,
           text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
         };
-        await transporter.sendMail(mailOptions, function (err, data) {
+         transporter.sendMail(mailOptions, function (err, data) {
           if (err) {
             console.log("error oh my god", err);
           } else {
