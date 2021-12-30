@@ -35,8 +35,8 @@ export default async function HandleForm(req, res) {
       const post = await prisma.contact.create({
         data: JSON.parse(body),
       });
-      console.log(post);
       await SendMail();
+      console.log(post);
     };
     await bruh();
 
