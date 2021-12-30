@@ -8,7 +8,7 @@ export default async function HandleForm(req, res) {
     const parsedobj = JSON.parse(body);
     console.log(parsedobj);
     const SendMail = async () => {
-      let transporter = nodemailer.createTransport({
+      let transporter = await nodemailer.createTransport({
         service: "gmail",
         port: 587,
         secure: false, // true for 465, false for other ports
@@ -23,7 +23,7 @@ export default async function HandleForm(req, res) {
         subject: `Hi my name is ${parsedobj.firstName}`,
         text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
       };
-      transporter.sendMail(mailOptions, function (err, data) {
+      await transporter.sendMail(mailOptions, function (err, data) {
         if (err) {
           console.log("error oh my god", err);
         } else {
