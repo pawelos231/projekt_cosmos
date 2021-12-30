@@ -9,16 +9,16 @@ export default async function HandleForm(req, res) {
     console.log(parsedobj);
     const SendMail = async () => {
       let transporter = await nodemailer.createTransport({
-        service: "gmail",
+        service: "hotmail",
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-          user: "pawelossek@gmail.com", // generated ethereal user
+          user: "pawelossssek@outlook.com", // generated ethereal user
           pass: "JebacPolicje123", // generated ethereal password
         },
       });
       let mailOptions = {
-        from: `pawelossek@gmail.com`,
+        from: `pawelossssek@outlook.com`,
         to: `pawellinek3d@gmail.com`,
         subject: `Hi my name is ${parsedobj.firstName}`,
         text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
