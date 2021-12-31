@@ -32,6 +32,7 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
           rel="stylesheet"
         />
         <title>Proffesional Web Design</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
         <meta
           name="keywords"

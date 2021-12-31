@@ -33,7 +33,7 @@ const Omnie = ({ isOn }) => {
           <div>
             <div>
               <h2 id={styles.red}>Ambitionous</h2>
-              <p>
+              <p data-ison={isOn}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
                 nisi, officiis veritatis eligendi minima ducimus, in, laboriosam
                 rem delectus mollitia quae
@@ -41,7 +41,7 @@ const Omnie = ({ isOn }) => {
             </div>
             <div>
               <h2 id={styles.blue}>Hardworking</h2>
-              <p>
+              <p data-ison={isOn}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
                 nisi, officiis veritatis eligendi minima ducimus, in, laboriosam
                 rem delectus mollitia quae
@@ -49,7 +49,7 @@ const Omnie = ({ isOn }) => {
             </div>
             <div>
               <h2 id={styles.orange}>Passion</h2>
-              <p>
+              <p data-ison={isOn}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
                 nisi, officiis veritatis eligendi minima ducimus, in, laboriosam
                 rem delectus mollitia quae

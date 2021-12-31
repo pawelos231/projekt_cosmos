@@ -7,6 +7,7 @@
 body{
     height: 200vh;
     overflow-x: hidden;
+    user-select: none;
 }
 ::-webkit-scrollbar {
     width: 8.5px;

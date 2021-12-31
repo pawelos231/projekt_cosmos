@@ -26,6 +26,9 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
     SetMessage(e.target.value);
   };
   const handleSubmit = async (e) => {
+    localStorage.setItem("BtnData", "data");
+    let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
+    btn.style.transform = "scale(0.9)";
     e.preventDefault();
     if (message !== "" && email !== "" && name !== "" && lastName !== "") {
       const DatabaseUserInformation = {
@@ -34,7 +37,18 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         email: email,
         message: message,
       };
+      if (localStorage.getItem("BtnData") == "data") {
+        console.log(btn);
+        btn.disabled = true;
+        btn.textContent = "Thanks";
+      }
       console.log(DatabaseUserInformation);
+      setTimeout(() => {
+        let h1 = document.querySelector(".Form_h1Style__7psHs");
+        let form = `Formularz się wysyła...`;
+        h1.textContent = form;
+      }, 20);
+
       const response = await fetch("/api/form", {
         method: "POST",
         body: JSON.stringify(DatabaseUserInformation),
@@ -55,8 +69,11 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-      ></motion.div>
-      <motion.h1 className={styles.h1Style} exit={{ y: -1000 }}></motion.h1>
+      >
+        <div>
+          <motion.h1 className={styles.h1Style} exit={{ y: -1000 }}></motion.h1>
+        </div>
+      </motion.div>
       <motion.form
         action="https://formsubmit.co/pawellinek2@gmail.com"
         method="POST"

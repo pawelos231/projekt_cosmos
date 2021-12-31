@@ -8,6 +8,14 @@ const NavBar = ({ isOn }) => {
   const [form, setForm] = useState(false);
 
   const HandleModalVisibility = async () => {
+    if (localStorage.getItem("BtnData") == "data") {
+      setTimeout(() => {
+        let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
+        console.log(btn);
+        btn.disabled = true;
+        btn.textContent = "Thanks";
+      }, 30);
+    }
     setForm(!form);
   };
   const HandleModalVisibilityKeyHandle = (e) => {
