@@ -13,7 +13,7 @@ export default async function HandleForm(req, res) {
           setTimeout(resolve, ms);
         });
       }
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 2; i++) {
         let transporter = nodemailer.createTransport({
           service: "hotmail",
           port: 465,
