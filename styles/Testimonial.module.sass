@@ -27,11 +27,17 @@
     cursor: pointer
     transition: .3s
 
+.arrowRight[data-isOn="true"]
+    color: white
+
+.arrowLeft[data-isOn="true"]
+    color: white
+
 .arrowRight:hover
-    color: blue
+    color: $main-blue
 
 .arrowLeft:hover
-    color: blue
+    color: $main-blue
 
 .image
     width: 70%
@@ -50,6 +56,10 @@
         margin-top: 20px
         color: black
         font-weight: bold
+        transition: .3s
+
+    p[data-isOn="true"]
+        color: white
 
 .MainContainer
     position: absolute
@@ -62,6 +72,7 @@
 .smallOnes
     height: 15vh
     width: 15vh
+    opacity: 0.4
 
 .imageContainer
     border-radius: 50%

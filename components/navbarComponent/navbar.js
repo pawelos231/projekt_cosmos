@@ -43,11 +43,8 @@ const NavBar = ({ isOn }) => {
           <Link href="/">
             <li id={styles.mainSite}>BotPrzemekXD</li>
           </Link>
-          <Link href="/posts/first-post">
-            <li>about me</li>
-          </Link>
 
-          <Link href="/gallery">
+          <Link href="/gallerySite">
             <li>Galery</li>
           </Link>
           <li>Colab</li>

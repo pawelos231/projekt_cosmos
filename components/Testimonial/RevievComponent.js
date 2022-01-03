@@ -2,7 +2,13 @@ import React from "react";
 import styles from "../../styles/Testimonial.module.sass";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-const RevievComponent = ({ TextData, tabOfImages, classOne, Ratings }) => {
+const RevievComponent = ({
+  TextData,
+  tabOfImages,
+  classOne,
+  Ratings,
+  isOn,
+}) => {
   let tab = [];
   for (let i = 0; i < Ratings; i++) {
     tab.push(i);
@@ -17,7 +23,7 @@ const RevievComponent = ({ TextData, tabOfImages, classOne, Ratings }) => {
                 <FontAwesomeIcon icon={faStar} className={styles.star} />
               ))}
             </div>
-            <p>{TextData}</p>
+            <p data-ison={isOn}>{TextData}</p>
             <div
               className={
                 classOne === "smallOnes"

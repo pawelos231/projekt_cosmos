@@ -10,7 +10,7 @@ import { Ratings } from "./ImageData";
 import styles from "../../styles/Testimonial.module.sass";
 import "aos/dist/aos.css";
 import Aos from "aos";
-const Slider = () => {
+const Slider = ({ isOn }) => {
   const length = tabOfImages.length;
   let [slide, setSlide] = useState(0);
   const FrontSlide = () => {
@@ -33,6 +33,7 @@ const Slider = () => {
           tabOfImages={tabOfImages}
           Ratings={Ratings}
           classOne="smallOnes"
+          isOn={isOn}
         />
         <RevievComponent
           slide={slide}
@@ -40,6 +41,7 @@ const Slider = () => {
           TextData={TextData[slide]}
           tabOfImages={tabOfImages[slide].Image.src}
           Ratings={Ratings[slide]}
+          isOn={isOn}
         />
         <Check
           TextData={TextData}
@@ -48,16 +50,19 @@ const Slider = () => {
           tabOfImages={tabOfImages}
           Ratings={Ratings}
           classOne="smallOnes"
+          isOn={isOn}
         />
         <FontAwesomeIcon
           onClick={BackSlide}
           className={styles.arrowLeft}
           icon={faArrowLeft}
+          data-ison={isOn}
         />
         <FontAwesomeIcon
           onClick={FrontSlide}
           className={styles.arrowRight}
           icon={faArrowRight}
+          data-ison={isOn}
         />
       </div>
     </>

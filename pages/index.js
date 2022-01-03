@@ -12,7 +12,7 @@ export default function Home({ isOn }) {
         <HeaderText isOn={isOn} />
         <Offers isOn={isOn} />
         <Aboutme isOn={isOn} />
-        <Testimonial />
+        <Testimonial isOn={isOn} />
       </div>
     </>
   );

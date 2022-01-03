@@ -7,6 +7,7 @@ const checkWhattoRender = ({
   tabOfImages,
   classOne,
   Ratings,
+  isOn,
 }) => {
   if (slide !== 0 && slide !== 1) {
     console.log(slide);
@@ -21,6 +22,7 @@ const checkWhattoRender = ({
             Ratings={Ratings[slide - 2]}
             TextData={TextData[slide - 2]}
             tabOfImages={tabOfImages[slide - 2].Image.src}
+            isOn={isOn}
           />
           <RevievComponent
             classOne={classOne}
@@ -30,6 +32,7 @@ const checkWhattoRender = ({
             length={length}
             TextData={TextData[slide - 1]}
             tabOfImages={tabOfImages[slide - 1].Image.src}
+            isOn={isOn}
           />
         </>
       </>
@@ -46,6 +49,7 @@ const checkWhattoRender = ({
             key={"niewiem3"}
             TextData={TextData[length - 2]}
             tabOfImages={tabOfImages[length - 2].Image.src}
+            isOn={isOn}
           />
           <RevievComponent
             classOne={classOne}
@@ -55,6 +59,7 @@ const checkWhattoRender = ({
             key={"niewiem2"}
             TextData={TextData[length - 1]}
             tabOfImages={tabOfImages[length - 1].Image.src}
+            isOn={isOn}
           />
         </>
       </>
@@ -71,6 +76,7 @@ const checkWhattoRender = ({
             Ratings={Ratings[length - 1]}
             TextData={TextData[length - 1]}
             tabOfImages={tabOfImages[length - 1].Image.src}
+            isOn={isOn}
           />
           <RevievComponent
             classOne={classOne}
@@ -80,6 +86,7 @@ const checkWhattoRender = ({
             key={"niewiem1"}
             TextData={TextData[slide - 1]}
             tabOfImages={tabOfImages[slide - 1].Image.src}
+            isOn={isOn}
           />
         </>
       </>
