@@ -15,6 +15,7 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
 
   const HandleOnNameChange = async (e) => {
     SetName(e.target.value);
+    localStorage.setItem("BtnData", "");
   };
   const HandleOnLastNameChange = (e) => {
     SetLastname(e.target.value);

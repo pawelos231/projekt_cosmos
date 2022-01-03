@@ -16,7 +16,8 @@ const GalleryComponent = () => {
             <Image
               src={item.src}
               width={500}
-              height={300}
+              objectFit="cover"
+              height={400}
               quality={50}
               className={styles.image}
             />

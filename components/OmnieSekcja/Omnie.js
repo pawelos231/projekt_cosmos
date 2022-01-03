@@ -9,6 +9,7 @@ const Omnie = ({ isOn }) => {
       className={styles.MainSectionAboutMe}
       data-aos="zoom-in"
       data-aos-easing="linear"
+      data-aos-duration="500"
     >
       <div className={styles.firstDiv}>
         <h2>About me</h2>
