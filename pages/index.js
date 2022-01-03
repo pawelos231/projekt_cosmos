@@ -3,6 +3,7 @@ import HeaderText from "../components/Header/HeaderText";
 import Offers from "../components/RevievSection/Offers";
 import Aboutme from "../components/AboutMeSection/Aboutme";
 import Omnie from "../components/OmnieSekcja/Omnie";
+import Testimonial from "../components/Testimonial/Testimonial";
 export default function Home({ isOn }) {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Home({ isOn }) {
         <HeaderText isOn={isOn} />
         <Offers isOn={isOn} />
         <Aboutme isOn={isOn} />
+        <Testimonial />
       </div>
     </>
   );

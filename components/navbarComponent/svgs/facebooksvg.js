@@ -4,6 +4,7 @@ const Facebooksvg = () => {
     <svg
       id={styles.svgSize}
       aria-hidden="true"
+      className={styles.fbicon}
       focusable="false"
       data-prefix="fab"
       data-icon="facebook-messenger"

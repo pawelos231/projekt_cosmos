@@ -20,15 +20,15 @@ export default async function HandleForm(req, res) {
           secure: false,
           tls: {
             ciphers: "SSLv3",
-          }, // true for 465, false for other ports
+          },
           auth: {
-            user: `pawelosssek@hotmail.com`, // generated ethereal user
-            pass: `JebacPolicje123`, // generated ethereal password
+            user: `pawelosssek@hotmail.com`,
+            pass: `JebacPolicje123`,
           },
         });
         let mailOptions = {
           from: `pawelosssek@hotmail.com`,
-          to: `pawellinek3d@gmail.com`,
+          to: `pawellinek3d@gmail.com, bp.graphics.contact@gmail.com`,
           subject: `Hi my name is ${parsedobj.firstName}`,
           text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
         };
@@ -55,4 +55,3 @@ export default async function HandleForm(req, res) {
     res.status(200).json({ name: "sexo" });
   }
 }
-//G$AM@2khMk3RJYS

@@ -25,10 +25,12 @@ const menuNavPhone = ({ isOn }) => {
         </Link>
         <li>Colab</li>
         <li>My projects</li>
-        <Facebooksvg />
-        <Twittersvg />
-        <Message />
-        <Youtube />
+        <div className={styles.mediaContainer}>
+          <Facebooksvg />
+          <Twittersvg />
+          <Message />
+          <Youtube />
+        </div>
       </ul>
     </motion.nav>
   );

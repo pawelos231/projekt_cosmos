@@ -1,0 +1,105 @@
+@import _mainColors.sass
+.slide
+    opacity: 1
+    transition-duration: .3s ease
+
+.slide-active
+    opacity: 1
+    transition: .3s
+    transform: scale(1.08)
+
+.arrowLeft
+    position: absolute
+    font-size: 50px
+    top: 50vh
+    transform: translate(-50%)
+    cursor: pointer
+    transition: .3s
+    margin-left: -10px
+
+.arrowRight
+    position: absolute
+    margin-left: 180px
+    margin-left: 120px
+    top: 50vh
+    transform: translate(-50%)
+    font-size: 50px
+    cursor: pointer
+    transition: .3s
+
+.arrowRight:hover
+    color: blue
+
+.arrowLeft:hover
+    color: blue
+
+.image
+    width: 70%
+
+.imageSmall
+    width: 45%
+
+.container
+    display: flex
+    justify-content: center
+    flex-direction: column
+    width: 100vw
+    margin-top: 20px
+    p
+        font-size: 25px
+        margin-top: 20px
+        color: black
+        font-weight: bold
+
+.MainContainer
+    position: absolute
+    display: flex
+    justify-content: center
+    width: 70vw
+    top: 500vh
+    text-align: center
+
+.smallOnes
+    height: 15vh
+    width: 15vh
+
+.imageContainer
+    border-radius: 50%
+    margin-top: 20px
+
+.imageContainer
+    overflow: hidden
+
+.small
+    height: 28vh
+    width: 28vh
+
+.smallImageContainer
+    width: 15vh
+    height: 15vh
+    border-radius: 50%
+    overflow: hidden
+    margin-left: 50%
+    transform: translate(-50%)
+    margin-top: 20px
+
+.starWrapper a
+    font-size: 2em
+    color: gold
+    text-decoration: none
+    transition: all 0.5s
+    margin: 4px
+
+.star
+    font-size: 1.5em
+    color: gold
+    text-decoration: none
+    transition: all 0.5s
+    margin: 4px
+.testimonialTital
+    font-size: 40px
+    position: absolute
+    left: 50%
+    top: -10vh
+    color: $main-red
+    transform: translate(-50%)

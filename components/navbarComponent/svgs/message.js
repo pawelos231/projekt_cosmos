@@ -5,6 +5,7 @@ const Message = () => {
       id={styles.svgSize3}
       aria-hidden="true"
       focusable="false"
+      className={styles.fbicon}
       data-prefix="far"
       data-icon="envelope"
       role="img"
