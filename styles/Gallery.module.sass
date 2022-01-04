@@ -1,7 +1,9 @@
+@import '_mainColors.sass'
 .mainGalleryContainer
     display: flex
     flex-wrap: wrap
     justify-content: space-around
+    transition: .3s
 .imageContainer
     height: 35vh
     width: 29vw
@@ -9,9 +11,13 @@
     margin-top: 8vh
     border-radius: 22px
     overflow: hidden
-    &:hover
-        transform: scale(1.1)
-        cursor: pointer
+    transition: .3s
+    display: block
 
 .image
     object-fit: contain
+
+.mainGalleryContainer[data-isOn="true"]
+    background-color: $main-black
+.imageContainer[data-isOn="true"]
+    border: 2px solid white

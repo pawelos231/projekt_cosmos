@@ -1,8 +1,8 @@
 import GalleryComponent from "../components/Gallery/GalleryComponent";
-const GallerySite = () => {
+const GallerySite = ({ isOn }) => {
   return (
     <div>
-      <GalleryComponent />
+      <GalleryComponent isOn={isOn} />
     </div>
   );
 };

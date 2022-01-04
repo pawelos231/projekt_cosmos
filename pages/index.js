@@ -4,6 +4,7 @@ import Offers from "../components/RevievSection/Offers";
 import Aboutme from "../components/AboutMeSection/Aboutme";
 import Omnie from "../components/OmnieSekcja/Omnie";
 import Testimonial from "../components/Testimonial/Testimonial";
+import Footer from "../components/Footer/Footer";
 export default function Home({ isOn }) {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home({ isOn }) {
         <Offers isOn={isOn} />
         <Aboutme isOn={isOn} />
         <Testimonial isOn={isOn} />
+        <Footer isOn={isOn} />
       </div>
     </>
   );

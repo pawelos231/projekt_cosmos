@@ -2,12 +2,13 @@ import { tabImages } from "./DataImages";
 import styles from "../../styles/Gallery.module.sass";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-const GalleryComponent = () => {
+const GalleryComponent = ({ isOn }) => {
   return (
-    <div className={styles.mainGalleryContainer}>
+    <div data-ison={isOn} className={styles.mainGalleryContainer}>
       {tabImages.map((item) => (
         <AnimatePresence>
           <motion.div
+            data-ison={isOn}
             key={item.src}
             className={styles.imageContainer}
             initial={{ y: -1000 }}
@@ -18,6 +19,7 @@ const GalleryComponent = () => {
               width={500}
               objectFit="cover"
               height={400}
+              layout="responsive"
               quality={50}
               className={styles.image}
             />
