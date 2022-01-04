@@ -16,11 +16,12 @@ const GalleryComponent = ({ isOn }) => {
           >
             <Image
               src={item.src}
-              width={500}
+              width={300}
+              height={300}
               objectFit="cover"
-              height={400}
               layout="responsive"
-              quality={50}
+              quality={20}
+              alt="Photo from my projects"
               className={styles.image}
             />
           </motion.div>
