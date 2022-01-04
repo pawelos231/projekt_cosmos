@@ -20,7 +20,11 @@ const RevievComponent = ({
           <div className={styles.container}>
             <div className={styles.starWrapper}>
               {tab.map((item) => (
-                <FontAwesomeIcon icon={faStar} className={styles.star} />
+                <FontAwesomeIcon
+                  key={item}
+                  icon={faStar}
+                  className={styles.star}
+                />
               ))}
             </div>
             <p data-ison={isOn}>{TextData}</p>

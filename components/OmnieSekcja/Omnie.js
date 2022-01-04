@@ -3,7 +3,11 @@ import styles from "../../styles/Omnie.module.sass";
 import AuthorFace from "../../public/New Project (2).png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Omnie = ({ isOn }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section
       className={styles.MainSectionAboutMe}

@@ -16,6 +16,7 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
   useEffect(() => {
     window.addEventListener("resize", showMenu);
     showMenu();
+    console.log(window.innerWidth);
   }, []);
 
   return (
@@ -32,8 +33,12 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
           rel="stylesheet"
         />
         <title>Proffesional Web Design</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
         <meta
           name="keywords"
           content="Design, Photoshop, proffesional designer, designer, aftereffects, Professional designer"

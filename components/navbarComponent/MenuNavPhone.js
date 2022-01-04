@@ -9,7 +9,7 @@ const menuNavPhone = ({ isOn }) => {
   return (
     <motion.nav
       className={styles.navigationPhoneMenu}
-      data-isOn={isOn}
+      data-ison={isOn}
       initial={{ x: -500 }}
       animate={{ x: 0 }}
       exit={{ x: -10000 }}

@@ -9,6 +9,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Ratings } from "./ImageData";
 import styles from "../../styles/Testimonial.module.sass";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 import Aos from "aos";
 const Slider = ({ isOn }) => {
   const length = tabOfImages.length;
@@ -21,6 +22,9 @@ const Slider = ({ isOn }) => {
     setSlide(slide === 0 ? (slide = length - 1) : slide - 1);
     console.log(slide);
   };
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <>

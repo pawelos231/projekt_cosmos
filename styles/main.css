@@ -4,8 +4,7 @@
     box-sizing: border-box;
     font-family: DM Sans;
 }
-body{
-    height: 200vh;
+body, html{
     overflow-x: hidden;
     user-select: none;
 }

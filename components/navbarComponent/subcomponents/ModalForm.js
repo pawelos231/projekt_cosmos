@@ -16,6 +16,9 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
   const HandleOnNameChange = async (e) => {
     SetName(e.target.value);
     localStorage.setItem("BtnData", "");
+    let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
+    btn.disabled = false;
+    btn.textContent = "Send";
   };
   const HandleOnLastNameChange = (e) => {
     SetLastname(e.target.value);
