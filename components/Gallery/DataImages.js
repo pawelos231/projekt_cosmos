@@ -4,7 +4,7 @@ import Nature3 from "./images/3.jpg";
 import Nature4 from "./images/4.jpg";
 import Nature5 from "./images/5.jpg";
 import Nature6 from "./images/6.jpg";
-import Nature7 from "./images/7.jpg";
+import Nature7 from "./images/13.jpg";
 import Nature8 from "./images/8.jpg";
 import Nature9 from "./images/9.jpg";
 import Nature10 from "./images/10.jpg";

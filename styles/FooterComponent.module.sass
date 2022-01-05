@@ -9,9 +9,39 @@
     display: flex
     justify-content: center
     width: 100%
+    flex-wrap: wrap
     p
         font-size: 3rem
+        flex-basis: 100%
+        text-align: center
+        height: 10vh
+    .titlesOfFunctions
+        font-size: 1.5rem
+        text-align: center
+        margin: 10px
+        flex-basis: 30%
+        margin-top: -10vh
+        color: $main-red
+        transition: .3s
+        .smallInformation
+            font-size: 1.1rem
+            margin-top: 12px
+            height: 3vh
+            color: white
+            transition: .3s
+    .smallInformation[data-isOn="true"]
+        color: black
 
 .MainFooterContainer[data-isOn="true"]
     background-color: white
     color: black
+
+@media(max-width: 720px)
+    .MainFooterContainer
+        height: 80%
+        .titlesOfFunctions
+            flex-basis: 70%
+            margin-top: 3vh
+            font-size: 1.2rem
+            .smallInformation
+                font-size: 0.8rem

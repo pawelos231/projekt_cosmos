@@ -5,7 +5,7 @@ const HeaderText = ({ isOn }) => {
   return (
     <>
       <header data-ison={isOn} className={styles.mainText}>
-        <h1>Top Quality photoshop projects</h1>
+        <h1>Top Quality Photoshop Projects</h1>
         <p>
           Hi, my name is Przemek and i am a proffesional designer. I worked on
           various of projects, all of wchich are listed in my gallery. I would

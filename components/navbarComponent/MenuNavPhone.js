@@ -17,14 +17,14 @@ const menuNavPhone = ({ isOn }) => {
     >
       <ul>
         <Link href="/posts/first-post">
-          <li>about me</li>
+          <li>oferta</li>
         </Link>
 
         <Link href="/colors/white">
-          <li>Galery</li>
+          <li>kontakt</li>
         </Link>
-        <li>Colab</li>
-        <li>My projects</li>
+        <li>artykuły</li>
+        <li>kosmos</li>
         <div className={styles.mediaContainer}>
           <Facebooksvg />
           <Twittersvg />
