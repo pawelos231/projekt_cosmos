@@ -20,19 +20,10 @@
     background-color: white
     color: black
 
-@media(max-width: 720px)
-    .MainFooterContainer
-        height: 80%
-        .titlesOfFunctions
-            flex-basis: 70%
-            margin-top: 3vh
-            font-size: 1.2rem
-            .smallInformation
-                font-size: 0.8rem
-
 .containerfor
     width: 100%
     display: flex
+    margin-top: 5vh
     justify-content: center
     p
         font-size: 1.5rem
@@ -50,3 +41,31 @@
             transition: .3s
         p[data-isOn="true"]
             color: black
+
+.fbicon
+    width: 3%
+    margin-left: 50px
+    margin-right: 50px
+    cursor: pointer
+    transition: .3s
+    &:hover
+        color: $main-blue
+
+@media(max-width: 720px)
+    .MainFooterContainer
+        min-height: 80%
+        height: 90%
+
+    .containerfor
+        width: 100vh
+        margin-top: 5vh
+        justify-content: center
+        flex-wrap: wrap
+        p
+            flex-basis: 70%
+            font-size: 1.1rem
+            margin-top: 0vh
+            p
+                font-size: 0.9rem
+    .fbicon
+        width: 10%

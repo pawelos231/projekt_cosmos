@@ -1,4 +1,8 @@
 import styles from "../../styles/FooterComponent.module.sass";
+import Facebooksvg from "./Subcomponents/facebooksvg";
+import Youtube from "./Subcomponents/youtube";
+import Message from "./Subcomponents/message";
+import Twittersvg from "./Subcomponents/twittersvg";
 const Footer = ({ isOn }) => {
   return (
     <footer data-ison={isOn} className={styles.MainFooterContainer}>
@@ -23,6 +27,10 @@ const Footer = ({ isOn }) => {
           <p data-ison={isOn}>kraj: Rosja</p>
         </p>
       </div>
+      <Twittersvg />
+      <Message />
+      <Youtube />
+      <Facebooksvg />
     </footer>
   );
 };
