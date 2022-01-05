@@ -10,27 +10,11 @@
     justify-content: center
     width: 100%
     flex-wrap: wrap
-    p
+    .titleComp
         font-size: 3rem
         flex-basis: 100%
         text-align: center
         height: 10vh
-    .titlesOfFunctions
-        font-size: 1.5rem
-        text-align: center
-        margin: 10px
-        flex-basis: 30%
-        margin-top: -10vh
-        color: $main-red
-        transition: .3s
-        .smallInformation
-            font-size: 1.1rem
-            margin-top: 12px
-            height: 3vh
-            color: white
-            transition: .3s
-    .smallInformation[data-isOn="true"]
-        color: black
 
 .MainFooterContainer[data-isOn="true"]
     background-color: white
@@ -45,3 +29,24 @@
             font-size: 1.2rem
             .smallInformation
                 font-size: 0.8rem
+
+.containerfor
+    width: 100%
+    display: flex
+    justify-content: center
+    p
+        font-size: 1.5rem
+        text-align: center
+        margin: 10px
+        flex-basis: 30%
+        margin-top: -10vh
+        color: $main-red
+        transition: .3s
+        p
+            font-size: 1.1rem
+            margin-top: 12px
+            height: 3vh
+            color: white
+            transition: .3s
+        p[data-isOn="true"]
+            color: black

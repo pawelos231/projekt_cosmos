@@ -2,43 +2,27 @@ import styles from "../../styles/FooterComponent.module.sass";
 const Footer = ({ isOn }) => {
   return (
     <footer data-ison={isOn} className={styles.MainFooterContainer}>
-      <p>Footer</p>
-      <p data-ison={isOn} className={styles.titlesOfFunctions}>
-        Contact
-        <p data-ison={isOn} className={styles.smallInformation}>
-          Phone: 796343312
+      <h1 className={styles.titleComp}>Footer</h1>
+      <div className={styles.containerfor}>
+        <p data-ison={isOn} className={styles.titlesOfFunctions}>
+          Contact
+          <p data-ison={isOn}>Phone: 796343312</p>
+          <p data-ison={isOn}>Email: bambolejo@interia.com</p>
+          <p data-ison={isOn}>Nie wiem co tu napisać</p>
         </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          Email: bambolejo@interia.com
+        <p className={styles.titlesOfFunctions} data-ison={isOn}>
+          Usefull links
+          <p data-ison={isOn}>google.com</p>
+          <p data-ison={isOn}>abcight.com</p>
+          <p data-ison={isOn}>facebook.com XD</p>
         </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          Nie wiem co tu napisać
+        <p className={styles.titlesOfFunctions} data-ison={isOn}>
+          Address
+          <p data-ison={isOn}>Ulica: nie powiem</p>
+          <p data-ison={isOn}>Miasto: L zabrze</p>
+          <p data-ison={isOn}>kraj: Rosja</p>
         </p>
-      </p>
-      <p data-ison={isOn} className={styles.titlesOfFunctions}>
-        Usefull links
-        <p data-ison={isOn} className={styles.smallInformation}>
-          google.com
-        </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          abcight.com
-        </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          facebook.com XD
-        </p>
-      </p>
-      <p data-ison={isOn} className={styles.titlesOfFunctions}>
-        Address
-        <p data-ison={isOn} className={styles.smallInformation}>
-          Ulica: nie powiem
-        </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          Miasto: L zabrze
-        </p>
-        <p data-ison={isOn} className={styles.smallInformation}>
-          kraj: Rosja
-        </p>
-      </p>
+      </div>
     </footer>
   );
 };
