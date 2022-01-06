@@ -33,14 +33,11 @@ const GalleryComponent = ({ isOn }) => {
             quality={20}
             alt="Photo from my projects"
             className={styles.image}
-            blurDataURL="./images/sfd.gif"
-            placeholder="blur"
           />
         </motion.div>
       </AnimatePresence>
     </div>
   ));
-  console.log(click);
   return (
     <div data-ison={isOn} className={styles.mainGalleryContainer}>
       {click === false ? (

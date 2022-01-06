@@ -1,0 +1,17 @@
+{
+    "name": "Professional designer",
+    "short_name": "Prof design",
+    "lang": "pl-PL",
+    "start_url": "/",
+    "scope": "/",
+    "desciption": "professional photoshop projects",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "./Sambacouture-logo-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+  }
