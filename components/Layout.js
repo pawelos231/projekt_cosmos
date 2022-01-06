@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import NavbarPhone from "./navbarComponent/navbarPhone";
+import NavbarPhone from "./navbarComponent/subcomponents/navbarPhone";
 import styles from "../styles/switchDarkMode.module.sass";
 import { motion } from "framer-motion";
 import Head from "next/head";

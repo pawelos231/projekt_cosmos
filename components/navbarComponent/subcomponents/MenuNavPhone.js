@@ -1,9 +1,9 @@
-import styles from "../../styles/navbarPhone.module.sass";
+import styles from "../../../styles/navbarPhone.module.sass";
 import Link from "next/link";
-import Facebooksvg from "./svgs/facebooksvg";
-import Twittersvg from "./svgs/twittersvg";
-import Message from "./svgs/message";
-import Youtube from "./svgs/youtube";
+import Facebooksvg from "../svgs/facebooksvg";
+import Twittersvg from "../svgs/twittersvg";
+import Message from "../svgs/message";
+import Youtube from "../svgs/youtube";
 import { motion } from "framer-motion";
 const menuNavPhone = ({ isOn }) => {
   return (

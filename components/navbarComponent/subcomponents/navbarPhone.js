@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import styles from "../../styles/navbarPhone.module.sass";
+import styles from "../../../styles/navbarPhone.module.sass";
 import { useState } from "react";
 import MenuNavPhone from "./MenuNavPhone";
 import { motion, AnimatePresence } from "framer-motion";
