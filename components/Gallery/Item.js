@@ -16,7 +16,7 @@ const Item = ({ click, itemId }) => {
             src={tabImages[itemId].src}
             height={220}
             width={350}
-            quality={100}
+            quality={10}
             layout="responsive"
           />
         </motion.div>
