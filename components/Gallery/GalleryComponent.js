@@ -33,6 +33,8 @@ const GalleryComponent = ({ isOn }) => {
             quality={20}
             alt="Photo from my projects"
             className={styles.image}
+            blurDataURL="./images/sfd.gif"
+            placeholder="blur"
           />
         </motion.div>
       </AnimatePresence>

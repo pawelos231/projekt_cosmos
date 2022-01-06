@@ -18,6 +18,9 @@ const Item = ({ click, itemId }) => {
             width={550}
             quality={50}
             layout="responsive"
+            loading="eager"
+            blurDataURL="./images/sfd.gif"
+            placeholder="blur"
           />
         </motion.div>
       </AnimatePresence>
