@@ -7,6 +7,7 @@
     "desciption": "professional photoshop projects",
     "display": "standalone",
     "theme_color": "#ffffff",
+    "background_color": "white",
     "icons": [
         {
             "src": "./Sambacouture-logo-icon.png",
