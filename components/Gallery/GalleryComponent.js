@@ -6,11 +6,23 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 let index = 0;
 const GalleryComponent = ({ isOn }) => {
+  const [resize, setOnResize] = useState(false);
   const [click, setClick] = useState(false);
   const handleClickToBig = (i) => {
     setClick(!click);
     index = i;
   };
+
+  const toggleImage = () => {
+    if (window.innerWidth < 720) {
+      setOnResize(true);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", toggleImage);
+    toggleImage();
+  }, []);
+  console.log(resize);
   const newTab = tabImages.map((item, i) => (
     <div>
       <AnimatePresence>
@@ -27,7 +39,7 @@ const GalleryComponent = ({ isOn }) => {
           <Image
             src={item.src}
             width={300}
-            height={200}
+            height={300}
             objectFit="cover"
             layout="responsive"
             quality={20}
@@ -45,7 +57,7 @@ const GalleryComponent = ({ isOn }) => {
       ) : (
         <motion.div className={styles.ContainerForPhotos}>
           {newTab}
-          <Item itemId={index} click={handleClickToBig} />
+          <Item resize={resize} itemId={index} click={handleClickToBig} />
         </motion.div>
       )}
     </div>

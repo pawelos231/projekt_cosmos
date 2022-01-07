@@ -23,11 +23,22 @@ const RevievComponent = ({
                 <FontAwesomeIcon
                   key={item}
                   icon={faStar}
-                  className={styles.star}
+                  className={
+                    classOne === "smallOnes" ? styles.smallStar : styles.star
+                  }
                 />
               ))}
             </div>
-            <p data-ison={isOn}>{TextData}</p>
+            <p
+              className={
+                classOne === "smallOnes"
+                  ? styles.smallBluryText
+                  : styles.normalTextSize
+              }
+              data-ison={isOn}
+            >
+              {TextData}
+            </p>
             <div
               className={
                 classOne === "smallOnes"

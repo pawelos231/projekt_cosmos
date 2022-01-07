@@ -15,12 +15,12 @@
     transform: translate(-50%)
     cursor: pointer
     transition: .3s
-    margin-left: -10px
+    margin-left: -20px
 
 .arrowRight
     position: absolute
     margin-left: 180px
-    margin-left: 120px
+    margin-left: 110px
     top: 50vh
     transform: translate(-50%)
     font-size: 50px
@@ -54,6 +54,8 @@
     p
         font-size: 25px
         margin-top: 20px
+        width: 150%
+        margin-left: -25%
         color: black
         font-weight: bold
         transition: .3s
@@ -107,6 +109,15 @@
     text-decoration: none
     transition: all 0.5s
     margin: 4px
+.smallStar
+    font-size: 0.7rem
+    color: gold
+    opacity: 0.4
+
+.smallBluryText
+    font-size: 15px !important
+    opacity: 0.4
+
 .testimonialTital
     font-size: 40px
     position: absolute
@@ -116,5 +127,27 @@
     transform: translate(-50%)
 
 @media(max-width: 720px)
+    .small
+        width: 23vh
+        height: 23vh
+    .arrowRight
+        top: 67.5vh
+        font-size: 60px
+        left: 50vw
+    .arrowLeft
+        top: 67.5vh
+        font-size: 60px
+        left: 0vw
     .MainContainer
         flex-wrap: wrap
+        top: 590vh
+    .container
+        font-size: 12px
+        p
+            font-size: 17px
+    .smallImageContainer
+        width: 10vh
+        height: 10vh
+        img
+            margin-top: -10px
+            margin-left: -20px
