@@ -1,10 +1,12 @@
 import styles from "../../styles/header.module.sass";
 import Blob from "./Subcomponents/blob";
 import BlobBlue from "./Subcomponents/BlobBlue";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const HeaderText = ({ isOn }) => {
   return (
     <>
-      <header data-ison={isOn} className={styles.mainText}>
+      <header data-aos="zoom-in" data-ison={isOn} className={styles.mainText}>
         <h1>Top Quality Photoshop Projects</h1>
         <p>
           Hi, my name is Przemek and i am a proffesional designer. I worked on

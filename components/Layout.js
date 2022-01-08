@@ -4,6 +4,7 @@ import styles from "../styles/switchDarkMode.module.sass";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import NavBar from "./navbarComponent/navbar";
+import Footer from "./Footer/Footer";
 const Layout = ({ children, isOn, toggleSwitch }) => {
   const [size, setOnResize] = useState(false);
   const showMenu = () => {

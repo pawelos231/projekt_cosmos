@@ -1,8 +1,8 @@
-import styles from "../../styles/FooterComponent.module.sass";
-import Facebooksvg from "./Subcomponents/facebooksvg";
-import Youtube from "./Subcomponents/youtube";
-import Message from "./Subcomponents/message";
-import Twittersvg from "./Subcomponents/twittersvg";
+import styles from "../../styles/FooterComponentGallery.module.sass";
+import Facebooksvg from "../Footer/Subcomponents/facebooksvg";
+import Youtube from "../Footer/Subcomponents/youtube";
+import Message from "../Footer/Subcomponents/message";
+import Twittersvg from "../Footer/Subcomponents/twittersvg";
 const Footer = ({ isOn }) => {
   return (
     <footer data-ison={isOn} className={styles.MainFooterContainer}>

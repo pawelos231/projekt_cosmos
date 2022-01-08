@@ -72,8 +72,6 @@ const ModalForm = ({ isOn }) => {
         method="POST"
         onSubmit={handleSubmit}
         className={styles.Form}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
       >
         <input
           required={true}

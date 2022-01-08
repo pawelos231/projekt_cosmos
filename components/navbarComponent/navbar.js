@@ -28,6 +28,10 @@ const NavBar = ({ isOn }) => {
   useEffect(() => {
     window.addEventListener("keydown", HandleModalVisibilityKeyHandle);
   }, []);
+  const HandleScrollToElement = (elem) => {
+    let aboutme = document.querySelector(elem);
+    aboutme.scrollIntoView();
+  };
 
   return (
     <>
@@ -43,6 +47,18 @@ const NavBar = ({ isOn }) => {
           <Link href="/">
             <li id={styles.mainSite}>Mysite</li>
           </Link>
+          <li
+            onClick={() => HandleScrollToElement(".Omnie_AboutMeText__q_BO0")}
+          >
+            About me
+          </li>
+          <li
+            onClick={() =>
+              HandleScrollToElement(".Testimonial_testimonialTital__Yf71q")
+            }
+          >
+            Revievs
+          </li>
 
           <Link href="/gallerySite">
             <li>Galery</li>

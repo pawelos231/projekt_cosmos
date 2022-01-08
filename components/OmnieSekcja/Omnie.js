@@ -16,7 +16,7 @@ const Omnie = ({ isOn }) => {
       data-aos-duration="500"
     >
       <div className={styles.firstDiv}>
-        <h2>About me</h2>
+        <h2 className={styles.AboutMeText}>About me</h2>
         <p data-ison={isOn}>
           Hi, my name is Przemek, i am 18 years Old, i am a professional graphic
           designer with a lot of ambition and passion, you can always check my

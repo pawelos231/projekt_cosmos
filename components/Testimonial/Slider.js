@@ -29,7 +29,7 @@ const Slider = ({ isOn }) => {
   return (
     <>
       <div className={styles.MainContainer} data-aos="fade-up">
-        <h1 className={styles.testimonialTital}>Testimonial</h1>
+        <h1 className={styles.testimonialTital}>Revievs</h1>
         <CheckWhattoRender
           TextData={TextData}
           slide={slide}
