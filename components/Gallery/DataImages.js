@@ -24,3 +24,17 @@ export const tabImages = [
   Nature11,
   Nature12,
 ];
+export const tabfData = [
+  { title: "LOREM LOREM1", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM2", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM3", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM4", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM5", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM6", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM7", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM8", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM9", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM10", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM11", text: "lorem lorem lorrem lorem lroem" },
+  { title: "LOREM LOREM12", text: "lorem lorem lorrem lorem lroem" },
+];

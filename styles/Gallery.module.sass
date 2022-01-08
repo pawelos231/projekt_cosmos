@@ -52,16 +52,42 @@
     width: 60vw
     margin-right: 30vw
     border-radius: 32px
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.575)
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.575)
     overflow: hidden
+    border: 2px solid black
 
-@media(max-width: 1000px)
+.TextContainer
+    width: 25vw
+    height: 80vh
+    top: 10vh
+    background-color: white
+    position: absolute
+    left: 70vw
+    border-radius: 42px
+    color: black
+    font-size: 12px
+    display: flex
+    align-items: center
+    flex-direction: column
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.575)
+    h2
+        padding: 12px
+        color: $main-red
+        font-size: 25px
+    p
+        text-align: center
+        padding: 12px
+        font-size: 16px
+        line-height: 200%
+
+@media(max-width: 1200px)
     .imageContainer
         height: 30vh
         width: 45vw
+    .imageContainerBig
+        margin-top: 0%
 
 @media(max-width: 720px)
-    .bigImageContainer
 
     .imageContainer
         height: 40vh
@@ -69,6 +95,19 @@
     .imageContainerBig
         width: 100vw
         height: 39vh
-        margin-top: -50%
+        margin-top: -70%
         margin-right: 5vw
         margin-left: 5vw
+    .TextContainer
+        top: 51vh
+        width: 90vw
+        left: 5vw
+        height: 40vh
+        h2
+            font-size: 20px
+        p
+            font-size: 12px
+
+@media(max-width: 420px)
+    .imageContainerBig
+        margin-top: -110%

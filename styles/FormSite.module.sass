@@ -1,0 +1,109 @@
+.modalContainer
+    width: 100vw
+    height: 100vh
+    transition: .3s
+
+.modalContainer[data-ison="true"]
+    background-color: black
+
+.FormModal
+    position: absolute
+    margin-top: 10vh
+    background-color: rgba(0, 0, 0, .2)
+    backdrop-filter: blur(12px)
+    z-index: 1000
+    display: flex
+    justify-content: center
+    align-items: center
+    div
+        width: 100%
+        height: 20vh
+        display: flex
+        justify-content: center
+        .h1Style
+            color: red
+            font-size: 50px
+            position: absolute
+            text-align: center
+            top: 2%
+            z-index: 5000
+
+.Form
+    width: 60vw
+    position: absolute
+    top: 20%
+    height: 80vh
+    left: 20vw
+    background-color: white
+    border-radius: 15px
+    z-index: 1001
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    input
+        flex-basis: 10%
+        width: 50%
+        border: 1px solid black
+        background-color: #fff
+        text-align: center
+        margin: 10px
+        font-size: 1.5rem
+.svgClose
+    position: absolute
+    font-size: 55px
+    top: 3%
+    color: black
+    left: 3%
+    cursor: pointer
+    transition: .3s
+    &:hover
+        transform: rotate(-360deg)
+
+#FormButtonSend
+    transition: .2s
+    width: 20%
+    height: 10%
+    font-size: 2rem
+    border-radius: 10px
+    border: none
+    background-color: #ddd
+    cursor: pointer
+
+#FormButtonSend:active,
+#FormButtonSend:hover
+    outline: 0
+    transform: scale(1.1)
+
+#textAreaHolder
+    width: 60%
+    margin: 15px
+    font-size: 15px
+    height: 20%
+
+@media(max-width: 1200px)
+    .Form
+        width: 70vw
+        left: 15vw
+        margin-top: -7vh
+        input
+            width: 65%
+            padding: 20px
+            margin-top: 3vh
+    #textAreaHolder
+        width: 70%
+    #FormButtonSend
+        width: 30vw
+
+@media(max-width: 720px)
+    .Form
+        width: 90vw
+        left: 5vw
+        margin-top: -8vh
+        input
+            width: 70%
+            padding: 20px
+            margin-top: 4vh
+    #FormButtonSend
+        width: 60vw
+        height: 12vh

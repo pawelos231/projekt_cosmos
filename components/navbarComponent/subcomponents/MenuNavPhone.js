@@ -16,15 +16,16 @@ const menuNavPhone = ({ isOn }) => {
       transition={{ type: "linear" }}
     >
       <ul>
-        <Link href="/posts/first-post">
-          <li>oferta</li>
+        <Link href="/">
+          <li>Main Site</li>
+        </Link>
+        <Link href="/gallerySite">
+          <li>Galeria</li>
         </Link>
 
-        <Link href="/colors/white">
-          <li>kontakt</li>
+        <Link href="/contact">
+          <li>Contact</li>
         </Link>
-        <li>artykuły</li>
-        <li>kosmos</li>
         <div className={styles.mediaContainer}>
           <Facebooksvg />
           <Twittersvg />

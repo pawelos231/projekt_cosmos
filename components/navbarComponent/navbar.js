@@ -47,8 +47,9 @@ const NavBar = ({ isOn }) => {
           <Link href="/gallerySite">
             <li>Galery</li>
           </Link>
-          <li>Colab</li>
-          <li>Contact</li>
+          <Link href="/contact">
+            <li>Contact</li>
+          </Link>
         </ul>
         <button id={styles.buttonStyleStart} onClick={HandleModalVisibility}>
           Message me

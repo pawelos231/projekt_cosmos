@@ -1,6 +1,6 @@
 import styles from "../../styles/Gallery.module.sass";
 import Image from "next/image";
-import { tabImages } from "./DataImages";
+import { tabImages, tabfData } from "./DataImages";
 import { AnimatePresence, motion } from "framer-motion";
 const Item = ({ click, itemId, resize }) => {
   return (
@@ -13,7 +13,7 @@ const Item = ({ click, itemId, resize }) => {
         >
           <Image
             src={tabImages[itemId].src}
-            height={resize ? 500 : 405}
+            height={resize ? 590 : 405}
             width={resize ? 580 : 600}
             quality={25}
             layout="responsive"
@@ -21,6 +21,14 @@ const Item = ({ click, itemId, resize }) => {
           />
         </motion.div>
       </AnimatePresence>
+      <motion.div
+        initial={{ y: "-100%" }}
+        animate={{ y: 0 }}
+        className={styles.TextContainer}
+      >
+        <h2>{tabfData[itemId].title}</h2>
+        <p>{tabfData[itemId].text}</p>
+      </motion.div>
     </div>
   );
 };

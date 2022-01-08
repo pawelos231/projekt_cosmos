@@ -14,7 +14,7 @@ const GalleryComponent = ({ isOn }) => {
   };
 
   const toggleImage = () => {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 920) {
       setOnResize(true);
     }
   };
@@ -39,10 +39,10 @@ const GalleryComponent = ({ isOn }) => {
           <Image
             src={item.src}
             width={300}
-            height={300}
+            height={resize === false ? 300 : 360}
             objectFit="cover"
             layout="responsive"
-            quality={20}
+            quality={40}
             alt="Photo from my projects"
             className={styles.image}
           />
