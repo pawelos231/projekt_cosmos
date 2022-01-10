@@ -48,7 +48,7 @@ const RevievComponent = ({
             >
               <img
                 src={tabOfImages}
-                alt="sexo"
+                alt="Client Reviev"
                 className={
                   classOne === "smallOnes" ? styles.smallOnes : styles.small
                 }

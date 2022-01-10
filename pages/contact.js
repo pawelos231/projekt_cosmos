@@ -67,12 +67,7 @@ const ModalForm = ({ isOn }) => {
           <motion.h1 className={styles.h1Style}></motion.h1>
         </div>
       </motion.div>
-      <motion.form
-        action="https://formsubmit.co/pawellinek2@gmail.com"
-        method="POST"
-        onSubmit={handleSubmit}
-        className={styles.Form}
-      >
+      <motion.form onSubmit={handleSubmit} className={styles.Form}>
         <input
           required={true}
           type="text"

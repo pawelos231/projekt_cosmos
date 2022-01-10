@@ -78,8 +78,6 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         </div>
       </motion.div>
       <motion.form
-        action="https://formsubmit.co/pawellinek2@gmail.com"
-        method="POST"
         onSubmit={handleSubmit}
         className={styles.Form}
         exit={{ y: "-150%" }}
