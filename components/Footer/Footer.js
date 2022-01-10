@@ -6,7 +6,7 @@ import Twittersvg from "./Subcomponents/twittersvg";
 const Footer = ({ isOn }) => {
   return (
     <footer data-ison={isOn} className={styles.MainFooterContainer}>
-      <h1 className={styles.titleComp}>Footer</h1>
+      <h1 className={styles.titleComp}>Usefull Informations</h1>
       <div className={styles.containerfor}>
         <p data-ison={isOn} className={styles.titlesOfFunctions}>
           Contact
@@ -25,16 +25,16 @@ const Footer = ({ isOn }) => {
           <p data-ison={isOn}>Facebook</p>
           <p data-ison={isOn}>Youtube</p>
           <p data-ison={isOn}>Twitter</p>
-          <Youtube />
-          <Facebooksvg />
-          <Twittersvg />
+          <Youtube isOn={isOn} />
+          <Facebooksvg isOn={isOn} />
+          <Twittersvg isOn={isOn} />
         </p>
       </div>
       <div className={styles.SocialsContainer}>
-        <Facebooksvg />
-        <Twittersvg />
-        <Youtube />
-        <Message />
+        <Facebooksvg isOn={isOn} />
+        <Twittersvg isOn={isOn} />
+        <Youtube isOn={isOn} />
+        <Message isOn={isOn} />
       </div>
     </footer>
   );

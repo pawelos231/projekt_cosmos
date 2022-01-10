@@ -1,7 +1,8 @@
 import styles from "../../../styles/FooterComponent.module.sass";
-const Message = () => {
+const Message = ({ isOn }) => {
   return (
     <svg
+      data-ison={isOn}
       id={styles.svgSize3}
       aria-hidden="true"
       focusable="false"

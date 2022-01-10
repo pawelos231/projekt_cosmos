@@ -14,6 +14,7 @@
         font-size: 3rem
         flex-basis: 100%
         text-align: center
+        font-weight: 200
         height: 10vh
 
 .MainFooterContainer[data-isOn="true"]
@@ -29,6 +30,9 @@
         width: 5%
         color: $main-white
         margin-top: 15px
+        transition: .3s
+    .fbicon[data-isOn="true"]
+        color: $main-black
     p
         font-size: 1.5rem
         text-align: center
@@ -82,6 +86,10 @@
         position: absolute
         color: black
         top: 90%
+        svg
+            transition: .3s
+        svg[data-isOn="true"]
+            color: black
 
     .MainFooterContainer
         min-height: 100%
@@ -105,3 +113,6 @@
     .fbicon
         width: 10%
         display: none
+    .titleComp
+        font-size: 2rem !important
+        margin-top: 5vh

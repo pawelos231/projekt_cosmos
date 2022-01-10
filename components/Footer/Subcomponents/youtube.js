@@ -1,7 +1,8 @@
 import styles from "../../../styles/FooterComponent.module.sass";
-const Youtube = () => {
+const Youtube = ({ isOn }) => {
   return (
     <svg
+      data-ison={isOn}
       id={styles.svgSize4}
       aria-hidden="true"
       focusable="false"

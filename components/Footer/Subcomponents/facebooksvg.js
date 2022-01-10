@@ -1,7 +1,8 @@
 import styles from "../../../styles/FooterComponent.module.sass";
-const Facebooksvg = () => {
+const Facebooksvg = ({ isOn }) => {
   return (
     <svg
+      data-ison={isOn}
       id={styles.svgSize}
       aria-hidden="true"
       className={styles.fbicon}

@@ -1,7 +1,8 @@
 import styles from "../../../styles/FooterComponent.module.sass";
-const Twittersvg = () => {
+const Twittersvg = ({ isOn }) => {
   return (
     <svg
+      data-ison={isOn}
       id={styles.svgSize2}
       aria-hidden="true"
       focusable="false"

@@ -22,10 +22,19 @@
                 color: $main-red
 
 .navigationActive
-    backdrop-filter: blur(16px)
+    background-color: white
 
 .navigation[data-isOn="true"]
     color: white
+    background-color: $main-black
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))
+    .navigationActive
+        background-color: rgba(255, 255, 255, .0)
+        backdrop-filter: blur(16px)
+        -webkit-backdrop-filter: blur(16px)
+    .navigation[data-isOn="true"]
+        background-color: rgba(255, 255, 255, .0)
 
 #mainSite
     position: absolute

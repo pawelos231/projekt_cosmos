@@ -46,7 +46,6 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         btn.disabled = true;
         btn.textContent = "Thanks";
       }
-      console.log(DatabaseUserInformation);
       setTimeout(() => {
         let h1 = document.querySelector(".Form_h1Style__7psHs");
         let form = `Formularz się wysyła...`;
@@ -83,8 +82,8 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
         method="POST"
         onSubmit={handleSubmit}
         className={styles.Form}
-        exit={{ y: -1000 }}
-        initial={{ y: -2000 }}
+        exit={{ y: "-150%" }}
+        initial={{ y: "-150%" }}
         animate={{ y: 0 }}
       >
         <input
