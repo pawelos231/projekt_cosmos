@@ -60,8 +60,8 @@ export default async function HandleForm(req, res) {
       console.log(post);
     };
     await bruh();
+    res.status(200).json({ name: "SUCCESS" });
   } else {
-    console.log("przepraszamy ten email jest juz w bazie, uzyj innego !");
+    res.status(200).json({ name: "FAIL" });
   }
-  res.status(200).json({ name: "sexo" });
 }
