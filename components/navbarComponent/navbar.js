@@ -21,7 +21,8 @@ const NavBar = ({ isOn }) => {
   const HandleModalVisibilityKeyHandle = (e) => {
     if (e.keyCode === 13 && !form) {
       setForm(!form);
-    } else if (e.keyCode === 27 && form) {
+    }
+    if (e.keyCode === 27 && form) {
       setForm(!form);
     }
   };

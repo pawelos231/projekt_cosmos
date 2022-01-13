@@ -35,6 +35,11 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    textarea
+        &:focus
+            border: 0
+            box-shadow: 0px 0px 7px rgba(255, 0, 0, 0.575)
+
     input
         flex-basis: 10%
         width: 50%
@@ -43,6 +48,11 @@
         text-align: center
         margin: 10px
         font-size: 1.5rem
+        transition: .1s
+        &:focus
+            border: 0
+            box-shadow: 0px 0px 7px rgba(255, 0, 0, 0.575)
+
 .svgClose
     position: absolute
     font-size: 55px
