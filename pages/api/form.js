@@ -3,10 +3,19 @@ const nodemailer = require("nodemailer");
 
 export default async function HandleForm(req, res) {
   const prisma = new PrismaClient();
-  if (req.method == "POST") {
-    const body = req.body;
-    const parsedobj = JSON.parse(body);
-    console.log(parsedobj);
+  const body = req.body;
+  const parsedobj = JSON.parse(body);
+  console.log(parsedobj);
+  const findOneEmail = async () => {
+    let email = await prisma.contact.findFirst({
+      where: {
+        email: parsedobj.email,
+      },
+    });
+    return email;
+  };
+  const findOneMailResult = await findOneEmail();
+  if (findOneMailResult === null) {
     const SendMail = async () => {
       function waitforme(ms) {
         return new Promise((resolve) => {
@@ -51,7 +60,8 @@ export default async function HandleForm(req, res) {
       console.log(post);
     };
     await bruh();
-
-    res.status(200).json({ name: "sexo" });
+  } else {
+    console.log("przepraszamy ten email jest juz w bazie, uzyj innego !");
   }
+  res.status(200).json({ name: "sexo" });
 }
