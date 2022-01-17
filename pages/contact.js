@@ -11,7 +11,7 @@ const Contact = ({ isOn }) => {
   const HandleOnNameChange = async (e) => {
     SetName(e.target.value);
     localStorage.setItem("BtnData", "");
-    let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
+    let btn = document.querySelector("#FormSite_FormButtonSend__86HwC");
     btn.disabled = false;
     btn.textContent = "Send";
   };
@@ -25,10 +25,10 @@ const Contact = ({ isOn }) => {
     SetMessage(e.target.value);
   };
   const handleSubmit = async (e) => {
+    await e.preventDefault();
     localStorage.setItem("BtnData", "data");
-    let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
+    let btn = document.querySelector("#FormSite_FormButtonSend__86HwC");
     btn.style.transform = "scale(0.9)";
-    e.preventDefault();
     if (message !== "" && email !== "" && name !== "" && lastName !== "") {
       const DatabaseUserInformation = {
         firstName: name,
@@ -43,7 +43,7 @@ const Contact = ({ isOn }) => {
       }
       console.log(DatabaseUserInformation);
       setTimeout(() => {
-        let h1 = document.querySelector(".Form_h1Style__7psHs");
+        let h1 = document.querySelector(".FormSite_h1Style__xdxhe");
         let form = `Formularz się wysyła...`;
         h1.textContent = form;
       }, 20);
@@ -55,7 +55,7 @@ const Contact = ({ isOn }) => {
       const data = await response.json();
       console.log(data);
       setTimeout(() => {
-        let h1 = document.querySelector(".Form_h1Style__7psHs");
+        let h1 = document.querySelector(".FormSite_h1Style__xdxhe");
         h1.textContent = "Dziękujemy za przesłanie formularza";
       }, 20);
     }
