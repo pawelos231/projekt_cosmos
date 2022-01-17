@@ -45,7 +45,7 @@ export default async function HandleForm(req, res) {
         if (err) {
           console.log("error oh my god", err);
         } else {
-          console.log("EMAIL SENT!", data);
+          console.log("EMAIL SENT!");
         }
       });
       await waitforme(1500);
