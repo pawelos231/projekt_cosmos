@@ -30,13 +30,13 @@ export const tabOfImages = [
 ];
 
 export const TextData = [
-  "Wondetfull cooperation",
-  "Amazing work!",
-  "Very nice!",
-  "Fine work",
-  "Practice on the best level",
-  "Amazing!",
-  "Pretty good!",
+  "Świetna współpraca",
+  "Kosmos był niesamowity",
+  "Super!",
+  "Niesamowite doświadczenie",
+  "Niesamowite!",
+  "Nie mogę się doczekać ponownej współpracy",
+  "Całkiem nieźle",
 ];
 export const Ratings = [5, 4, 5, 4, 5, 4, 5];
 /*<RevievComponent

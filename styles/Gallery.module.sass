@@ -4,6 +4,8 @@
     flex-wrap: wrap
     justify-content: space-around
     transition: .3s
+    position: absolute
+    top: 500vh
 .imageContainer
     height: 35vh
     width: 29vw
@@ -33,6 +35,7 @@
     z-index: 9999
     width: 100vw
     height: 100vh
+    top: 0
     background-color: rgba(0, 0, 0, 0.6)
     backdrop-filter: blur(16px)
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.575)
@@ -48,7 +51,7 @@
     justify-content: space-around
 
 .imageContainerBig
-    height: 70vh
+    height: 60vh
     width: 60vw
     margin-right: 30vw
     border-radius: 32px
@@ -86,6 +89,8 @@
         margin-top: 0%
 
 @media(max-width: 720px)
+    .mainGalleryContainer
+        top: 880vh
 
     .imageContainer
         height: 40vh

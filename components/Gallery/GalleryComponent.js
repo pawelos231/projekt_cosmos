@@ -4,7 +4,6 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Item from "./Item";
-import Footer from "./footer";
 let index = 0;
 const GalleryComponent = ({ isOn }) => {
   const [resize, setOnResize] = useState(false);
@@ -23,10 +22,9 @@ const GalleryComponent = ({ isOn }) => {
     window.addEventListener("resize", toggleImage);
     toggleImage();
   }, []);
-  console.log(resize);
   const newTab = tabImages.map((item, i) => (
     <>
-      <div>
+      <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <AnimatePresence>
           <motion.div
             onClick={() => handleClickToBig(i)}
@@ -48,7 +46,7 @@ const GalleryComponent = ({ isOn }) => {
             />
           </motion.div>
         </AnimatePresence>
-      </div>
+      </motion.div>
     </>
   ));
   return (
@@ -61,7 +59,6 @@ const GalleryComponent = ({ isOn }) => {
           <Item resize={resize} itemId={index} click={handleClickToBig} />
         </motion.div>
       )}
-      <Footer isOn={isOn} />
     </div>
   );
 };

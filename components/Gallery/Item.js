@@ -14,8 +14,8 @@ const Item = ({ click, itemId, resize }) => {
           <Image
             src={tabImages[itemId].src}
             height={resize ? 590 : 405}
-            width={resize ? 580 : 600}
-            quality={25}
+            width={resize ? 580 : 700}
+            quality={55}
             layout="responsive"
             loading="eager"
           />

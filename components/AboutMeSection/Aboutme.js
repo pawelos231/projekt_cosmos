@@ -15,10 +15,10 @@ const Aboutme = ({ isOn }) => {
       <iframe
         title="Showcase of some projects that i have worked on"
         className={styles.scrollablePhotos}
-        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        src="https://nextjs.org/docs/getting-started"
       ></iframe>
       <div>
-        <h2>Showcase of my work</h2>
+        <h2>Pokaz naszej pracy</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed earum
           culpa consectetur sit ipsam error maiores sapiente repellat

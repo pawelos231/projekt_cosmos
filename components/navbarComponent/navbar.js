@@ -49,24 +49,36 @@ const NavBar = ({ isOn }) => {
             <li id={styles.mainSite}>Mysite</li>
           </Link>
           <li
-            onClick={() => HandleScrollToElement(".Omnie_AboutMeText__q_BO0")}
+            onClick={() =>
+              HandleScrollToElement(".offers_mainTextOffers__JLATa")
+            }
           >
-            About me
+            Oferta
           </li>
+
+          <li
+            onClick={() =>
+              HandleScrollToElement(".Articles_containerForArticles__EQ_VB")
+            }
+          >
+            Artykuły
+          </li>
+
+          <li
+            onClick={() =>
+              HandleScrollToElement(".Aboutme_AboutMeContainer__zL5xC")
+            }
+          >
+            Pokaz prac
+          </li>
+
           <li
             onClick={() =>
               HandleScrollToElement(".Testimonial_testimonialTital__Yf71q")
             }
           >
-            Revievs
+            Oceny klientów
           </li>
-
-          <Link href="/gallerySite">
-            <li>Galery</li>
-          </Link>
-          <Link href="/contact">
-            <li>Contact</li>
-          </Link>
         </ul>
         <button id={styles.buttonStyleStart} onClick={HandleModalVisibility}>
           Message me

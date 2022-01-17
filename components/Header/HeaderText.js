@@ -7,19 +7,16 @@ const HeaderText = ({ isOn }) => {
   return (
     <>
       <header data-aos="zoom-in" data-ison={isOn} className={styles.mainText}>
-        <h1>Top Quality Photoshop Projects</h1>
+        <h1>Strona o kosmosie</h1>
         <p>
-          Hi, my name is Przemek and i am a proffesional designer. I worked on
-          various of projects, all of wchich are listed in my gallery. I would
-          love to work with you, if you are intrested write to me in a form
-          above!
+          Witaj na stronie poświędconej głównie wszechświatowi! mam nadzieję że
+          znajdziesz tu mnóstwo rzeczy które cię zainteresują i pozwolą poznać
+          nowe niezmierzone granice tego jakże to pięknego i otaczającego nas z
+          każdej strony kosmosu
         </p>
       </header>
       <Blob />
       <BlobBlue />
-      <div data-ison={isOn} className={styles.InformationContainer}>
-        TU BĘDZIE SIĘ COŚ ZNAJDYWAŁO ALE NIE MAM NA TO MATERIAŁÓW XD
-      </div>
     </>
   );
 };

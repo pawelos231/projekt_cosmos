@@ -114,6 +114,8 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
           onChange={HandleOnMessageChange}
         />
         <button id={styles.FormButtonSend}>Send</button>
+        <p>wyrazam zgodę na wysłanie swoich danych:</p>
+        <input type="checkbox" required={true} id={styles.checkbox} />
         <FontAwesomeIcon
           icon={faTimes}
           className={styles.svgClose}

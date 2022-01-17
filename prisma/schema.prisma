@@ -11,7 +11,7 @@ datasource db {
   url      =  env("DATABASE_URL")
 }
 
-model Contact{
+model Dane{
   id        String @id @default(dbgenerated()) @map("_id") @db.ObjectId
   firstName String
   lastName  String

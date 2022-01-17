@@ -1,0 +1,42 @@
+
+@import '_mainColors.sass'
+.containerForArticles
+    display: flex
+    margin-top: 145vh
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+    transition: .3s
+    .tital
+        position: absolute
+        font-size: 30px
+        color: $main-red
+    article
+        flex-basis: 45%
+        text-align: center
+        margin-top: 10vh
+        h2
+            font-size: 20px
+            color: $main-black
+        p
+            width: 70%
+            margin-left: 15%
+            margin-top: 3vh
+            font-size: 14px
+            line-height: 200%
+
+.containerForArticles[data-ison="true"]
+    color: white
+    article
+        h2
+            color: $main-blue
+            font-weight: 200
+
+@media(max-width: 720px)
+    .containerForArticles
+        margin-top: 245vh
+        article
+            flex-basis: 100%
+            p
+                width: 85%
+                margin-left: 7.5%

@@ -15,7 +15,7 @@ const Offers = ({ isOn }) => {
     <>
       <div className={styles.mainTextOffers}>
         <h1 data-aos="fade-up" data-ison={isOn}>
-          What am i offering?
+          Co Oferujemy
         </h1>
         <p data-aos="fade-up">Important Featurtes</p>
       </div>
@@ -27,7 +27,7 @@ const Offers = ({ isOn }) => {
         <article className={styles.OffersSection}>
           <div>
             <FastPerfomance />
-            <h2>Fast perfomance</h2>
+            <h2>Przeloty na księżyc</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
               odit accusamus libero laudantium perferendis sunt eius ratione
@@ -38,7 +38,7 @@ const Offers = ({ isOn }) => {
 
           <div>
             <PhoneCall />
-            <h2>Always on the call</h2>
+            <h2>Zawsze pod telefonem</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
               odit accusamus libero laudantium perferendis sunt eius ratione
@@ -49,7 +49,7 @@ const Offers = ({ isOn }) => {
 
           <div>
             <People />
-            <h2>Customer Support</h2>
+            <h2>Wsparcie klienta</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
               odit accusamus libero laudantium perferendis sunt eius ratione
@@ -60,7 +60,7 @@ const Offers = ({ isOn }) => {
 
           <div>
             <NewIdea />
-            <h2>Open on new ideas</h2>
+            <h2>Otwarci na pomysły</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
               odit accusamus libero laudantium perferendis sunt eius ratione
