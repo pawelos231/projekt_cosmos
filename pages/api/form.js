@@ -16,12 +16,12 @@ export default async function HandleForm(req, res) {
     return email;
   };
   const findOneMailResult = await findOneEmail();*/
+  function waitforme(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }
   const SendMail = async () => {
-    function waitforme(ms) {
-      return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-      });
-    }
     for (let i = 0; i < 3; i++) {
       let transporter = nodemailer.createTransport({
         service: "hotmail",
@@ -41,7 +41,7 @@ export default async function HandleForm(req, res) {
         subject: `Hi my name is ${parsedobj.firstName}`,
         text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
       };
-      await waitforme(300);
+      await waitforme(500);
       transporter.sendMail(mailOptions, function (err, data) {
         if (err) {
           console.log("error oh my god", err);
