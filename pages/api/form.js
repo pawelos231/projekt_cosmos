@@ -22,7 +22,7 @@ export default async function HandleForm(req, res) {
           setTimeout(resolve, ms);
         });
       }
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i <= 2; i++) {
         let transporter = nodemailer.createTransport({
           service: "hotmail",
           port: 465,
@@ -35,7 +35,6 @@ export default async function HandleForm(req, res) {
             pass: `JebacPolicje123`,
           },
         });
-        await waitforme(500);
         let mailOptions = {
           from: `pawelosssek@hotmail.com`,
           to: `pawellinek3d@gmail.com, bp.graphics.contact@gmail.com`,
@@ -50,15 +49,15 @@ export default async function HandleForm(req, res) {
             flag = true;
           }
         });
-        await waitforme(500);
+        await waitforme(1000);
       }
     };
     const bruh = async () => {
-      await SendMail();
       const post = await prisma.contact.create({
         data: JSON.parse(body),
       });
       console.log(post);
+      await SendMail();
     };
     await bruh();
     res.status(200).json({ name: "SUCCESS" });
