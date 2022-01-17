@@ -62,7 +62,5 @@ export default async function HandleForm(req, res) {
     };
     await bruh();
     res.status(200).json({ name: "SUCCESS" });
-  } else {
-    res.status(200).json({ name: "FAIL" });
   }
 }
