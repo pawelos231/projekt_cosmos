@@ -52,12 +52,11 @@ export default async function HandleForm(req, res) {
     }
   };
   const bruh = async () => {
+    await SendMail();
     const post = await prisma.contact.create({
       data: JSON.parse(body),
     });
     console.log(post);
-    await SendMail();
   };
   await bruh();
-  res.status(200).json({ name: "SUCCESS" });
 }
