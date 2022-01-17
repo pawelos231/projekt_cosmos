@@ -59,4 +59,5 @@ export default async function HandleForm(req, res) {
     console.log(post);
   };
   await bruh();
+  res.status(200).json({ name: "John Doe" });
 }
