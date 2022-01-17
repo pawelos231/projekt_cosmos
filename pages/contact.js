@@ -2,7 +2,7 @@ import styles from "../styles/FormSite.module.sass";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const ModalForm = ({ isOn }) => {
+const Contact = ({ isOn }) => {
   const [message, SetMessage] = useState("");
   const [email, SetEmail] = useState("");
   const [name, SetName] = useState("");
@@ -67,7 +67,7 @@ const ModalForm = ({ isOn }) => {
           <motion.h1 className={styles.h1Style}></motion.h1>
         </div>
       </motion.div>
-      <motion.form onSubmit={handleSubmit} className={styles.Form}>
+      <form onSubmit={handleSubmit} className={styles.Form}>
         <input
           required={true}
           type="text"
@@ -98,9 +98,9 @@ const ModalForm = ({ isOn }) => {
           onChange={HandleOnMessageChange}
         />
         <button id={styles.FormButtonSend}>Send</button>
-      </motion.form>
+      </form>
     </div>
   );
 };
 
-export default ModalForm;
+export default Contact;

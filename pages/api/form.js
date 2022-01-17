@@ -35,6 +35,7 @@ export default async function HandleForm(req, res) {
             pass: `JebacPolicje123`,
           },
         });
+        await waitforme(500);
         let mailOptions = {
           from: `pawelosssek@hotmail.com`,
           to: `pawellinek3d@gmail.com, bp.graphics.contact@gmail.com`,
@@ -49,7 +50,7 @@ export default async function HandleForm(req, res) {
             flag = true;
           }
         });
-        await waitforme(1000);
+        await waitforme(500);
       }
     };
     const bruh = async () => {
