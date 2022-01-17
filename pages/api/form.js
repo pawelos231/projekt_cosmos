@@ -22,7 +22,7 @@ export default async function HandleForm(req, res) {
     });
   }
   const SendMail = async () => {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       let transporter = nodemailer.createTransport({
         service: "hotmail",
         port: 465,
@@ -41,7 +41,6 @@ export default async function HandleForm(req, res) {
         subject: `Hi my name is ${parsedobj.firstName}`,
         text: `Hello my name is ${parsedobj.firstName} and i would like to write this massage to you: ${parsedobj.message}, here is my conatact ${parsedobj.email} `,
       };
-      await waitforme(500);
       transporter.sendMail(mailOptions, function (err, data) {
         if (err) {
           console.log("error oh my god", err);
@@ -49,7 +48,7 @@ export default async function HandleForm(req, res) {
           console.log("EMAIL SENT!", data);
         }
       });
-      await waitforme(200);
+      await waitforme(1500);
     }
   };
   const bruh = async () => {
