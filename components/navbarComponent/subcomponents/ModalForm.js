@@ -3,7 +3,8 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import styles from "../../../styles/Form.module.sass";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+let count = 0;
+let countS = 0;
 const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
   const [message, SetMessage] = useState("");
   const [email, SetEmail] = useState("");
@@ -12,16 +13,24 @@ const ModalForm = ({ form, setForm, HandleModalVisibility }) => {
   HandleModalVisibility = () => {
     setForm(!form);
   };
-
   const HandleOnNameChange = async (e) => {
     SetName(e.target.value);
     localStorage.setItem("BtnData", "");
     let btn = document.querySelector("#Form_FormButtonSend__e4AVa");
     btn.disabled = false;
     btn.textContent = "Send";
+    count++;
+    console.log(count);
+    if (name[0] !== undefined && count == 2) {
+      SetName(name[0].toUpperCase());
+    }
   };
   const HandleOnLastNameChange = (e) => {
     SetLastname(e.target.value);
+    countS++;
+    if (lastName[0] !== undefined && countS == 2) {
+      SetLastname(lastName[0].toUpperCase());
+    }
   };
   const HandleOnEmailChange = (e) => {
     SetEmail(e.target.value);

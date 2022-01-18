@@ -62,12 +62,8 @@ const Contact = ({ isOn }) => {
   };
   return (
     <div className={styles.modalContainer} data-ison={isOn}>
-      <motion.div className={styles.FormModal}>
-        <div>
-          <motion.h1 className={styles.h1Style}></motion.h1>
-        </div>
-      </motion.div>
-      <form onSubmit={handleSubmit} className={styles.Form}>
+      <motion.div className={styles.FormModal}></motion.div>
+      <form onSubmit={handleSubmit} className={styles.Form} data-ison={isOn}>
         <input
           required={true}
           type="text"
@@ -98,6 +94,8 @@ const Contact = ({ isOn }) => {
           onChange={HandleOnMessageChange}
         />
         <button id={styles.FormButtonSend}>Send</button>
+        <p>wyrazam zgodę na wysłanie swoich danych:</p>
+        <input type="checkbox" required={true} />
       </form>
     </div>
   );
