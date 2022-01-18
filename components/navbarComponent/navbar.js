@@ -81,7 +81,7 @@ const NavBar = ({ isOn }) => {
           </li>
         </ul>
         <button id={styles.buttonStyleStart} onClick={HandleModalVisibility}>
-          Message me
+          Napisz do nas
         </button>
         <AnimatePresence>
           {form && (

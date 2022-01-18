@@ -32,7 +32,7 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap"
           rel="stylesheet"
         />
-        <title>Proffesional Web Design</title>
+        <title>niezmierzony kosmos</title>
 
         <meta charSet="UTF-8" />
         <meta
@@ -41,12 +41,12 @@ const Layout = ({ children, isOn, toggleSwitch }) => {
         ></meta>
         <meta
           name="keywords"
-          content="Design, Photoshop, proffesional designer, designer, aftereffects, Professional designer"
+          content="Cosmos, universe, NASA, Black hole, sun"
         />
         <meta name="author" content="Przemysław Szymański" />
         <meta
           name="description"
-          content="Website Containing my portfolio and things that i worked on, also presenting some of the revievs from my clients"
+          content="Strona mówiąca o zjawiskach we wszechświecie jak i promująca interesowanie się nim"
         />
       </Head>
       <div className={styles.switch} data-ison={isOn} onClick={toggleSwitch}>

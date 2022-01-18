@@ -6,6 +6,10 @@ import Message from "../svgs/message";
 import Youtube from "../svgs/youtube";
 import { motion } from "framer-motion";
 const menuNavPhone = ({ isOn }) => {
+  const HandleScrollToElement = (elem) => {
+    let aboutme = document.querySelector(elem);
+    aboutme.scrollIntoView();
+  };
   return (
     <motion.nav
       className={styles.navigationPhoneMenu}
@@ -16,16 +20,36 @@ const menuNavPhone = ({ isOn }) => {
       transition={{ type: "linear" }}
     >
       <ul>
-        <Link href="/">
-          <li>Main Site</li>
-        </Link>
-        <Link href="/gallerySite">
-          <li>Galeria</li>
-        </Link>
+        <li>Main Site</li>
+        <li
+          onClick={() => HandleScrollToElement(".offers_mainTextOffers__JLATa")}
+        >
+          Oferta
+        </li>
 
-        <Link href="/contact">
-          <li>Contact</li>
-        </Link>
+        <li
+          onClick={() =>
+            HandleScrollToElement(".Articles_containerForArticles__EQ_VB")
+          }
+        >
+          Artykuły
+        </li>
+
+        <li
+          onClick={() =>
+            HandleScrollToElement(".Aboutme_AboutMeContainer__zL5xC")
+          }
+        >
+          Pokaz prac
+        </li>
+
+        <li
+          onClick={() =>
+            HandleScrollToElement(".Testimonial_testimonialTital__Yf71q")
+          }
+        >
+          Oceny klientów
+        </li>
         <div className={styles.mediaContainer}>
           <Facebooksvg />
           <Twittersvg />

@@ -17,7 +17,7 @@ const Offers = ({ isOn }) => {
         <h1 data-aos="fade-up" data-ison={isOn}>
           Co Oferujemy
         </h1>
-        <p data-aos="fade-up">Important Featurtes</p>
+        <p data-aos="fade-up">Ważne cechy</p>
       </div>
       <section
         data-aos="fade-up"
