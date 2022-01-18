@@ -40,7 +40,7 @@ const GalleryComponent = ({ isOn }) => {
               height={resize === false ? 300 : 360}
               objectFit="cover"
               layout="responsive"
-              quality={40}
+              quality={35}
               alt="Photo from my projects"
               className={styles.image}
             />
@@ -52,7 +52,10 @@ const GalleryComponent = ({ isOn }) => {
   return (
     <div data-ison={isOn} className={styles.mainGalleryContainer}>
       {click === false ? (
-        <>{newTab}</>
+        <>
+          <h2 className={styles.titalForGallery}>Galeria Zdjęć</h2>
+          {newTab}
+        </>
       ) : (
         <motion.div className={styles.ContainerForPhotos}>
           {newTab}
