@@ -50,19 +50,19 @@ const GalleryComponent = ({ isOn }) => {
     </>
   ));
   return (
-    <div data-ison={isOn} className={styles.mainGalleryContainer}>
+    <>
       {click === false ? (
-        <>
+        <div data-ison={isOn} className={styles.mainGalleryContainer}>
           <h2 className={styles.titalForGallery}>Galeria Zdjęć</h2>
           {newTab}
-        </>
+        </div>
       ) : (
         <motion.div className={styles.ContainerForPhotos}>
           {newTab}
           <Item resize={resize} itemId={index} click={handleClickToBig} />
         </motion.div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -2,8 +2,9 @@
 .mainGalleryContainer
     transition: .3s
     position: absolute
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 5vw
     justify-content: space-around
     top: 520vh
 .imageContainer
@@ -84,8 +85,12 @@
     position: absolute
     color: $main-red
     font-size: 40px
+    left: 50%
+    transform: translate(-50%)
 
 @media(max-width: 1200px)
+    .mainGalleryContainer
+        grid-template-columns: repeat(2, 1fr)
     .imageContainer
         height: 30vh
         width: 45vw
@@ -95,6 +100,7 @@
 @media(max-width: 720px)
     .mainGalleryContainer
         top: 950vh
+        grid-template-columns: repeat(1, 1fr)
 
     .imageContainer
         height: 40vh
