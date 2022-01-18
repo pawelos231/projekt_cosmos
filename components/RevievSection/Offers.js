@@ -30,7 +30,7 @@ const Offers = ({ isOn }) => {
             <h2>Przeloty na księżyc</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
-              odit accusamus libero laudantium perferendis sunt eius ratione
+              odit accusamus libero laudanstium perferendis sunt eius ratione
               assumenda, dignissimos, animi dolorem! Iste rerum expedita
               laudantium fugiat, amet ad natus corrupti?
             </p>
