@@ -16,6 +16,7 @@ const Item = ({ click, itemId, resize }) => {
             height={resize ? 590 : 405}
             width={resize ? 580 : 700}
             quality={50}
+            alt="Photo about my work"
             layout="responsive"
             loading="eager"
           />
